@@ -6,9 +6,7 @@ if (!isset($_GET['ajax'])) {
 }
 
 if (isset($_POST['city'], $_POST['named_cities']) && is_array($_POST['named_cities'])) {
-    wtf($_POST,1);
     $_POST = trimAll($_POST,1);
-    wtf($_POST);
     $response = array();
     $probability = 90;
 

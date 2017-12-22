@@ -8,14 +8,14 @@ CORE::$END = '
 $_SESSION['user_hp_cities']   = 3;
 $_SESSION['server_hp_cities'] = 3;
 
-$x = [
-    '123   ',
-    '   321',
-    [
-        '   999   ',
-        '000'
-    ]
-];
-wtf($x,1);
-$x = trimAll($x,1);
-wtf($x);
+//$x = [
+//    '123   ',
+//    '   321',
+//    [
+//        '   999   ',
+//        '000'
+//    ]
+//];
+//wtf($x,1);
+//$x = trimAll($x,1);
+//wtf($x);
