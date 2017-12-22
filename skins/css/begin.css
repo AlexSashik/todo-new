@@ -1,0 +1,241 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i|Archivo+Black');
+* {
+  margin: 0;
+  padding:0;
+  outline:none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #999;
+}
+
+/* Прикрепляем футер к низу */
+#wrapper {
+  display: flex;
+  /*Резиновый блок*/
+  flex-direction: column;
+  /*Контент располагается сверху вниз*/
+  height: 100%;
+}
+#content {
+  flex: 1 0 auto;
+  /*1-й параметр - flex-grow- дает нам прикрипление*/
+}
+
+.main {
+  width: 970px;
+  margin: 0 auto;
+  padding: 20px 0 20px 0;
+  word-wrap: break-word;
+}
+.animate {
+  -ms-transition: all.4s ease;
+  -o-transition: all.4s ease;
+  -moz-transition: all.4s ease;
+  -webkit-transition: all.4s ease;
+  transition: all.4s ease;
+}
+.animate:hover {
+  -ms-transition: all.4s ease;
+  -o-transition: all.4s ease;
+  -moz-transition: all.4s ease;
+  -webkit-transition: all.4s ease;
+  transition: all.4s ease;
+}
+#upward {
+  position: fixed;
+  bottom: 73px;
+  right: 37px;
+  background-color: #72AAD0;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
+  z-index: 2;
+  background: url(/skins/img/default/upward.jpg) no-repeat;
+  display: none;
+}
+#upward:hover {
+  cursor: pointer;
+  background: url(/skins/img/default/upwardhover.jpg) no-repeat;
+}
+.clear {
+  clear: both;
+}
+.blue_background {
+  background-color: #72A9D0;
+}
+.silver_background {
+  background-color: #F5F5F5;
+}
+.white_background {
+  background-color: #fff;
+}
+.light_silver_background {
+  background-color: #F5F5F5;
+}
+.azure_background {
+  background-color: #5AA9D0;
+}
+/*Шапка сайта*/
+.header {
+  margin: 0 auto;
+  width: 950px;
+  padding: 0 10px 0 20px;
+  background-color: white;
+  height: 200px;
+  /* Для анимации, фон должен быть статичным */
+}
+.header img {
+  margin-top: 25px;
+  display: block;
+  float: left;
+}
+#first_layer aside {
+  float: right;
+  margin: 80px 30px 0 0;
+  color: #5FABD0;
+  -o-transition: all.6s ease;
+  -moz-transition: all.6s ease;
+  -webkit-transition: all.6s ease;
+  transition: all.6s ease;
+}
+#first_layer aside i:hover,
+#second_layer i:hover {
+  cursor: pointer;
+  color: #5F5F5F;
+  -o-transition: all.6s ease;
+  -moz-transition: all.6s ease;
+  -webkit-transition: all.6s ease;
+  transition: all.6s ease;
+}
+#first_layer aside {
+  text-align: right;
+}
+#first_layer aside p {
+  margin: -31px 10px 10px 0;
+}
+#first_layer aside p span {
+  font-style: italic;
+}
+#first_layer aside a {
+  color: #5FABD0;
+  margin-right: 10px;
+}
+#first_layer aside a:hover {
+  color: #5F5F5F;
+}
+.header nav {
+  clear: both;
+  padding: 20px 0 40px 0;
+  position: relative;
+}
+.header nav::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.header nav > a {
+  display: block;
+  float: left;
+  color: #57576A;
+  border: 1px solid white;
+  padding: 6px 21px 6px 21px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+.header nav > a.active,
+.header nav > a:hover {
+  color: white;
+  background-color: #5AAAD0;
+  border: 1px solid #5AAAD0;
+}
+#first_layer {
+  display: block;
+  opacity: 1;
+  padding-top: 0;
+}
+#second_layer {
+  display: none;
+  opacity: 0;
+  padding-top: 0;
+}
+#second_layer input {
+  float: left;
+  margin-top: 50px;
+  /*Делаем 80 с помощью js*/
+  width: 700px;
+  border: none;
+  color: #2F2F2F;
+  font-size: 1em;
+}
+.close {
+  float: right;
+  margin: 50px 10px 0 0;
+  /*Делаем 80 с помощью js*/
+  color: #B1B1C1;
+}
+#second_layer input::-webkit-input-placeholder {
+  color: #A3A3B6;
+}
+#second_layer input::-moz-placeholder {
+  color: #A3A3B6;
+}
+#second_layer input::-moz-placeholder {
+  color: #A3A3B6;
+}
+#second_layer input:-ms-input-placeholder {
+  color: #A3A3B6;
+}
+#second_layer i {
+  color: #5FABD0;
+  margin: 0 10px 0 10px;
+  -o-transition: all.6s ease;
+  -moz-transition: all.6s ease;
+  -webkit-transition: all.6s ease;
+  transition: all.6s ease;
+}
+nav div {
+  position: absolute;
+  background-color: #303030;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 0 15px 0;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 150px;
+  min-width: 100px;
+  word-wrap: break-word;
+  border-top: 30px solid white;
+  opacity: 0;
+  display: none;
+}
+nav div a {
+  display: block;
+  margin: 10px 15px 10px 15px;
+}
+nav div a:hover {
+  color: #FBFBFB;
+}
+#game_nav {
+  top: 53px;
+  left: 250px;
+}
+#demo:hover {
+  cursor: default;
+}
+#demo_nav {
+  top: 53px;
+  left: 810px;
+}

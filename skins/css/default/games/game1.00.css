@@ -1,0 +1,246 @@
+.main {
+    width: 970px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+
+.main h2 {
+    text-align: center;
+    color: #474747;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.game_choise_nav {
+    margin: 0 95px 0 95px;
+    min-height: 200px;
+}
+
+.game_choise_nav::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.games_choise {
+    float: left;
+    width: 350px;
+    text-align: center;
+    margin: 0 20px 0 20px;
+}
+
+.games_choise img {
+    border-radius: 10px;
+    filter: grayscale(100%);
+    width: 280px;
+}
+
+.games_choise img:hover {
+    filter: grayscale(0);
+    width: 300px;
+}
+
+
+.form {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid silver;
+    box-shadow: 0 0 10px #72AAD0;
+    padding: 10px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.user-shot {
+    background: url(/skins/img/default/game/inverse_blood.png) 417px 0 no-repeat;
+    text-shadow: 1px 1px 2px white;
+}
+
+.server-shot {
+    background: url(/skins/img/default/game/blood.png) no-repeat;
+    text-shadow: 1px 1px 2px white;
+}
+
+.form::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.progress-bar {
+    width: 196px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.back-green {
+    background-color: #71C489;
+    border: 1px solid #009E00;
+}
+
+.green {
+    background-color: #009E00;
+}
+
+.back-yellow {
+    background-color: #FFF3A6;
+    border: 1px solid #FFDD00;
+}
+
+.yellow {
+    background-color: #FFDD00;
+}
+
+.back-red {
+    background-color: #FF949F;
+    border: 1px solid #FF1919;
+}
+
+.red {
+    background-color: #FF1919;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 7px;
+}
+
+.user-enter-server-blocks {
+    min-height: 50px;
+    width: 200px;
+    margin-top: 30px;
+}
+
+.user-enter-server-blocks span {
+    font-size: 3em;
+}
+
+.number {
+    padding: 18px 0 18px 15px;
+    width: 183px;
+    border: 1px solid #E2E2E2;
+    border-radius: 2px;
+    -ms-transition: all.4s ease;
+    -o-transition: all.4s ease;
+    -moz-transition: all.4s ease;
+    -webkit-transition: all.4s ease;
+    transition: all.4s ease;
+    font-family:  'Archivo Black', sans-serif;
+}
+
+.red-border {
+    border: 1px solid red;
+}
+
+.number:active, .number:focus {
+    background-color: #F5F5F5;
+    -ms-transition: all.4s ease;
+    -o-transition: all.4s ease;
+    -moz-transition: all.4s ease;
+    -webkit-transition: all.4s ease;
+    transition: all.4s ease;
+}
+
+.number::-webkit-input-placeholder {
+    color: #A3A3B6;
+}
+
+.number::-moz-placeholder {
+    color: #A3A3B6;
+}
+
+.number:-moz-placeholder {
+    color: #A3A3B6;
+}
+
+.number:-ms-input-placeholder {
+    color: #A3A3B6;
+}
+
+.submit {
+    margin-top: 10px;
+    font-size: 1em;
+    color: white;
+    font-weight: lighter;
+    height: 56.5px;
+    width: 200px;
+    border: 1px solid #72AAD0;
+    border-radius: 5px;
+    background-color: #72AAD0;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: #3A3A50;
+    border: 1px solid #3A3A50;
+}
+
+.win, .lose {
+    background: url(/skins/img/default/game/win-lose2.jpg) no-repeat;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.win {
+    background-position: -465px 0px;
+    height: 260px;
+}
+
+.lose {
+    height: 323px;
+}
+
+.buttons {
+    margin: 0 auto;
+    width: 456px;
+}
+
+.buttons a {
+    float: left;
+    display: block;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    padding-top: 10px;
+    font-size: 1.2em;
+    color: white;
+    height: 45px;
+    width: 200px;
+    border: 1px solid #72AAD0;
+    border-radius: 5px;
+    background-color: #72AAD0;
+}
+
+.buttons a:hover {
+    background-color: #3A3A50;
+    border: 1px solid #3A3A50;
+}
+
+.result {
+    margin: 20px 0 20px 0;
+    font-size: 2em;
+}
+
+.red-color {
+    color: red;
+    font-weight: bold;
+}
+
+.green-color {
+    color: green;
+    font-weight: bold;
+}

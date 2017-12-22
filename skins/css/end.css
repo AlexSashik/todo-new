@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* Футер */
+/* 1-й блок футера */
+.footer_first_block {
+  width: 970px;
+  margin: 0 auto;
+  padding: 65px 0 70px 0;
+  background-color: #F5F5F5;
+}
+.footer_first_block::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+.footer_first_block img {
+  display: block;
+  float: left;
+  padding: 0 53px 0 15px;
+  width: 174px;
+}
+.footer_first_block aside {
+  float: left;
+  padding: 0 15px 0 15px;
+  width: 212px;
+}
+.footer_first_block aside a {
+  color: #4E4E4E;
+  display: block;
+  margin-bottom: 12px;
+}
+.footer_first_block aside a:hover {
+  color: #72AAD0;
+}
+.footer_first_block div {
+  float: left;
+  padding-right: 15px;
+  width: 212px;
+  color: #4E4E4E;
+}
+.footer_first_block div li {
+  line-height: 1.8;
+  margin-bottom: 6px;
+  list-style: none;
+  padding-left: 38px;
+}
+#footer_first_block_contacts_li1 {
+  background: url(/skins/img/default/sixthblockico.jpg) no-repeat 0 -5px;
+}
+#footer_first_block_contacts_li2 {
+  background: url(/skins/img/default/sixthblockico.jpg) no-repeat 0 -108px;
+}
+#footer_first_block_contacts_li3 {
+  background: url(/skins/img/default/sixthblockico.jpg) no-repeat 0 -144px;
+}
+.footer_first_block div span:hover {
+  cursor: pointer;
+  color: #72AAD0;
+}
+.footer_first_block form {
+  float: left;
+  width: 220px;
+  padding: 0 15px 0 20px;
+}
+.footer_first_block form p {
+  font-size: 1.5em;
+  color: #2F2F2F;
+  font-weight: bold;
+}
+.email {
+  padding: 18px 0 18px 15px;
+  width: 200px;
+  margin-top: 20px;
+  border: 1px solid #E2E2E2;
+  border-radius: 2px;
+  -ms-transition: all.4s ease;
+  -o-transition: all.4s ease;
+  -moz-transition: all.4s ease;
+  -webkit-transition: all.4s ease;
+  transition: all.4s ease;
+  font-family: 'Archivo Black', sans-serif;
+}
+.email:active,
+.email:focus {
+  background-color: #F5F5F5;
+  -ms-transition: all.4s ease;
+  -o-transition: all.4s ease;
+  -moz-transition: all.4s ease;
+  -webkit-transition: all.4s ease;
+  transition: all.4s ease;
+}
+.email::-webkit-input-placeholder {
+  color: #A3A3B6;
+}
+.email::-moz-placeholder {
+  color: #A3A3B6;
+}
+.email::-moz-placeholder {
+  color: #A3A3B6;
+}
+.email:-ms-input-placeholder {
+  color: #A3A3B6;
+}
+.subscribe {
+  margin-top: 10px;
+  color: white;
+  font-weight: lighter;
+  height: 56.5px;
+  width: 220px;
+  border: 1px solid #72AAD0;
+  border-radius: 5px;
+  background-color: #72AAD0;
+}
+.subscribe:hover {
+  cursor: pointer;
+  background-color: #3A3A50;
+  border: 1px solid #3A3A50;
+}
+/* 2-й блок футера */
+.footer_second_block {
+  background-color: #5AA9D0;
+  width: 960px;
+  margin: 0 auto;
+  padding: 22px 0px 7px 10px;
+  font-size: 0.85em;
+  color: white;
+}
+.footer_second_block::after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.copyrights {
+  float: left;
+}
+.social {
+  float: right;
+}
+.copyrights span {
+  margin-right: 15px;
+}
+.copyrights a {
+  color: white;
+  border-left: 1px solid white;
+  margin-left: 7px;
+  padding-left: 16px;
+}
+.copyrights a:hover {
+  color: #2C2C2C;
+}
+.social i {
+  color: #5AA9D0;
+  background-color: #CCE4F0;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin: 0 7.5px 16px 7.5px;
+  -ms-transition: all.3s ease;
+  -o-transition: all.3s ease;
+  -moz-transition: all.3s ease;
+  -webkit-transition: all.3s ease;
+  transition: all.3s ease;
+}
+.fa-facebook {
+  padding: 6px;
+}
+.fa-twitter {
+  padding: 6px 8px 6px 4px;
+}
+.fa-google-plus {
+  padding: 6px 10px 6px 2px;
+}
+.fa-instagram {
+  padding: 6px 7px 6px 5px;
+}
+.social i:hover {
+  color: #2C2C2C;
+  background-color: #fff;
+  -ms-transition: all.1s ease;
+  -o-transition: all.1s ease;
+  -moz-transition: all.1s ease;
+  -webkit-transition: all.1s ease;
+  transition: all.1s ease;
+}
