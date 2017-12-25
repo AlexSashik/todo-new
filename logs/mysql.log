@@ -1,0 +1,43 @@
+
+				INSERT INTO `comments` SET
+				`login`     = '`\'\"<b>test',
+				`email`     = 'asd@asd.dsa',
+				`text`      = '`\'\"<b>test',
+				`date`      = NOW(),
+				`status`  = 0
+			
+--Field 'avatar' doesn't have a default value
+--file: D:\OSPanel\domains\todo-new\modules\comments\ajax.php
+--line: 40
+--date: 2017-12-25 21:37:03
+===================================
+
+
+				INSERT INTO `comments` SET
+				`login`     = '`\'\"<b>test',
+				`email`     = 'asd@asd.dsa',
+				`text`      = '`\'\"<b>test',
+				`date`      = NOW(),
+				`status`  = 0
+			
+--Field 'avatar' doesn't have a default value
+--file: D:\OSPanel\domains\todo-new\modules\comments\ajax.php
+--line: 40
+--date: 2017-12-25 21:37:16
+===================================
+
+
+				INSERT INTO `comments` SET
+				`login`     = '`\'\"<b>test',
+				`email`     = 'asd@asd.dsa',
+				`text`      = '`\'\"<b>test',
+				`date`      = NOW(),
+				`status`    = 0,
+				`avatar`    = ''
+			
+--Field 'user_id' doesn't have a default value
+--file: D:\OSPanel\domains\todo-new\modules\comments\ajax.php
+--line: 40
+--date: 2017-12-25 21:39:47
+===================================
+

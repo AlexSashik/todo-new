@@ -1,0 +1,287 @@
+.clearfix:after,
+.clearfix:before,
+main .chat:after,
+main .chat:before,
+main .chat #chat-body .main-chat div:after,
+main .chat #chat-body .main-chat div:before,
+main .chat #chat-body form .send:after,
+main .chat #chat-body form .send:before,
+main .chat #chat-body .smiles:after,
+main .chat #chat-body .smiles:before {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+}
+main {
+  width: 970px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+main .chat {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 500px;
+  margin: auto;
+  background-color: #FAF9FA;
+  padding-bottom: 15px;
+}
+main .chat .chat-header,
+main .chat .chat-list-header {
+  text-align: center;
+  border-bottom: 1px solid #DAD8DE;
+  color: #19171c;
+  padding: 20px 30px;
+}
+main .chat #chat-body {
+  position: relative;
+}
+main .chat #chat-body .main-chat {
+  margin-bottom: 30px;
+  padding: 20px 30px 0 30px;
+  height: 170px;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+main .chat #chat-body .main-chat div {
+  margin-top: 10px;
+}
+main .chat #chat-body .main-chat div p {
+  float: left;
+  width: 400px;
+}
+main .chat #chat-body .main-chat div p em:hover {
+  cursor: pointer;
+}
+main .chat #chat-body .main-chat div p span {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-bottom: -3px;
+}
+main .chat #chat-body .main-chat div i {
+  margin: 3px;
+  float: left;
+  color: #E08575;
+}
+main .chat #chat-body .main-chat div i:hover {
+  cursor: pointer;
+  color: #c3422c;
+}
+main .chat #chat-body .main-chat .for-me > p {
+  color: #FF4500;
+}
+main .chat #chat-body .main-chat .welcome {
+  color: #6E6779;
+}
+main .chat #chat-body form {
+  display: block;
+  text-align: center;
+  height: 96px;
+}
+main .chat #chat-body form textarea {
+  border: 1px solid #A9A9A9;
+  width: 420px;
+  resize: none;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .chat #chat-body form textarea:focus {
+  -webkit-box-shadow: 0 0 1px #7d5bbe;
+  -moz-box-shadow: 0 0 1px #7d5bbe;
+  box-shadow: 0 0 1px #7d5bbe;
+  border: 1px solid #7d5bbe;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .chat #chat-body form .send {
+  width: 440px;
+  margin: 10px auto;
+}
+main .chat #chat-body form .send .settings {
+  float: left;
+  width: 20px;
+  text-align: center;
+  padding: 7px;
+  color: #6441A4;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .chat #chat-body form .send .settings:hover {
+  color: #2C2541;
+  background-color: #F2EFF5;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .chat #chat-body form .send .settings:active {
+  background-color: #FAF9FA;
+  -webkit-box-shadow: 0 0 6px 0 #7d5bbe;
+  -moz-box-shadow: 0 0 6px 0 #7d5bbe;
+  box-shadow: 0 0 6px 0 #7d5bbe;
+}
+main .chat #chat-body form .send button {
+  float: right;
+  width: 80px;
+  height: 30px;
+  background-color: #6441A4;
+  border: none;
+  color: white;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .chat #chat-body form .send button:hover {
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #7d5bbe;
+  cursor: pointer;
+}
+main .chat #chat-body form .send button:active {
+  background-color: #6441a4;
+  -webkit-box-shadow: 0 0 6px 0 #7d5bbe;
+  -moz-box-shadow: 0 0 6px 0 #7d5bbe;
+  box-shadow: 0 0 6px 0 #7d5bbe;
+}
+main .chat #chat-body .smiles {
+  width: 90px;
+  border: 1px solid #C5D0DB;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  position: absolute;
+  bottom: 28px;
+  left: -70px;
+  background-color: white;
+  display: none;
+}
+main .chat #chat-body .smiles .smile {
+  float: left;
+  width: 16px;
+  height: 17px;
+  margin: 4px;
+  padding: 2px 0 1px 2px;
+  border: 1px solid #fff;
+}
+main .chat #chat-body .smiles .smile:hover {
+  cursor: pointer;
+  border: 1px solid #C5D0DB;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+main .chat #chat-body .smile1 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat 1px 1px;
+}
+main .chat #chat-body .smile2 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -17px 1px;
+}
+main .chat #chat-body .smile3 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -35px 1px;
+}
+main .chat #chat-body .smile4 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -53px 1px;
+}
+main .chat #chat-body .smile5 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -71px 1px;
+}
+main .chat #chat-body .smile6 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -89px 1px;
+}
+main .chat #chat-body .smile7 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -107px 1px;
+}
+main .chat #chat-body .smile8 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -125px 1px;
+}
+main .chat #chat-body .smile9 {
+  background: url('/skins/img/default/chat/smiles.png') no-repeat -143px 1px;
+}
+main .chat #chat-list {
+  display: none;
+}
+main .chat #chat-list .chat-list-header {
+  position: relative;
+}
+main .chat #chat-list .chat-list-header i {
+  display: block;
+  position: absolute;
+  top: 12px;
+  color: #6441A4;
+  padding: 10px;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+main .chat #chat-list .chat-list-header i:hover {
+  background-color: #F2EFF5;
+  color: #2C2541;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+main .chat #chat-list .chat-list-header i:active {
+  background-color: #FAF9FA;
+  -webkit-box-shadow: 0 0 6px 0 #7d5bbe;
+  -moz-box-shadow: 0 0 6px 0 #7d5bbe;
+  box-shadow: 0 0 6px 0 #7d5bbe;
+}
+main .chat #chat-list .chat-list-header #backToChat {
+  left: 20px;
+}
+main .chat #chat-list .chat-list-header #refreshList {
+  right: 20px;
+}
+main .chat #chat-list .chat-list-main {
+  height: 219px;
+  padding: 20px;
+}
+main .chat #chat-list .chat-list-main #loading {
+  text-align: center;
+  display: none;
+}
+main .chat #chat-list .chat-list-main .group {
+  margin-top: 20px;
+  line-height: 1.5;
+  display: none;
+}
+main .chat #chat-list .chat-list-main .group p {
+  word-wrap: break-word;
+}
+main .chat #chat-list .chat-list-main .group p .span-for-ban {
+  color: silver;
+}
+main .chat #chat-list .chat-list-main .group p .span-for-ban:hover {
+  cursor: pointer;
+  color: #8d8d8d;
+}
+main .chat #chat-list .chat-list-main .group p .span-for-name {
+  text-decoration: underline;
+  color: #9441AC;
+}
+main .chat #chat-list .chat-list-main .group p .span-for-name:hover {
+  cursor: pointer;
+  text-decoration: none;
+}

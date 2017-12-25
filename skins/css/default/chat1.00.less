@@ -1,0 +1,244 @@
+@import "../lesshat/lesshat.less";
+.clearfix {
+  &:after, &:before {
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+  }
+}
+
+main {
+  width: 970px;
+  margin: auto;
+  margin-bottom: 30px;
+  .chat {
+    &:extend(.clearfix all);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 500px;
+    margin: auto;
+    background-color: #FAF9FA;
+    padding-bottom: 15px;
+    .chat-header, .chat-list-header {
+      text-align: center;
+      border-bottom: 1px solid #DAD8DE;
+      color: #19171c;
+      padding: 20px 30px;
+    }
+    #chat-body {
+      position: relative;
+      .main-chat {
+        margin-bottom: 30px;
+        padding: 20px 30px 0 30px;
+        height: 170px;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        div {
+          &:extend(.clearfix all);
+          margin-top: 10px;
+          p {
+            float: left;
+            width: 400px;
+            em:hover {
+              cursor: pointer;
+            }
+            span {
+              display: inline-block;
+              width: 18px;
+              height: 18px;
+              margin-bottom: -3px;
+            }
+          }
+          i {
+            margin: 3px;
+            float:left;
+            color: #E08575;
+            &:hover {
+              cursor: pointer;
+              color: darken(#E08575, 20%);
+            }
+          }
+        }
+        .for-me>p {
+          color: #FF4500;
+        }
+        .welcome {
+          color: #6E6779;
+        }
+      }
+      form {
+        display: block;
+        text-align: center;
+        height: 96px;
+        textarea {
+          border: 1px solid #A9A9A9;
+          width: 420px;
+          resize: none;
+          padding: 10px;
+          font-family: Arial, sans-serif;
+          .transition(0.2s ease);
+          &:focus {
+            .box-shadow(0 0 1px #7d5bbe);
+            border: 1px solid #7d5bbe;
+            .transition(0.2s ease);
+          }
+        }
+        .send {
+          &:extend(.clearfix all);
+          width: 440px;
+          margin: 10px auto;
+          .settings {
+            float: left;
+            width: 20px;
+            text-align: center;
+            padding: 7px;
+            color: #6441A4;
+            .transition(0.2s ease);
+            &:hover {
+              color: #2C2541;
+              background-color: #F2EFF5;
+              cursor: pointer;
+              .transition(0.2s ease);
+            }
+            &:active {
+              background-color: #FAF9FA;
+              .box-shadow(0 0 6px 0 #7d5bbe);
+            }
+          }
+          button {
+            float: right;
+            width: 80px;
+            height: 30px;
+            background-color: #6441A4;
+            border: none;
+            color: white;
+            .transition(0.2s ease);
+            &:hover {
+              .transition(0.2s ease);
+              background-color: #7d5bbe;
+              cursor: pointer;
+            }
+            &:active {
+              background-color: #6441a4;
+              .box-shadow(0 0 6px 0 #7d5bbe);
+            }
+          }
+        }
+      }
+      .smiles {
+        &:extend(.clearfix all);
+        width: 90px;
+        border: 1px solid #C5D0DB;
+        .border-radius(5px);
+        position: absolute;
+        bottom: 28px;
+        left: -70px;
+        background-color: white;
+        display: none;
+        .smile {
+          float: left;
+          width: 16px;
+          height: 17px;
+          margin: 4px;
+          padding: 2px 0 1px 2px;
+          border: 1px solid #fff;
+          &:hover {
+            cursor: pointer;
+            border: 1px solid #C5D0DB;
+            .border-radius(2px);
+          }
+        }
+      }
+      .smile1 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat 1px 1px;
+      }
+      .smile2 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -17px 1px;
+      }
+      .smile3 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -35px 1px;
+      }
+      .smile4 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -53px 1px;
+      }
+      .smile5 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -71px 1px;
+      }
+      .smile6 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -89px 1px;
+      }
+      .smile7 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -107px 1px;
+      }
+      .smile8 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -125px 1px;
+      }
+      .smile9 {
+        background: url('/skins/img/default/chat/smiles.png') no-repeat -143px 1px;
+      }
+      //display: none;
+    }
+    #chat-list {
+      display: none;
+      .chat-list-header {
+        position: relative;
+        i {
+          display: block;
+          position: absolute;
+          top: 12px;
+          color: #6441A4;
+          padding: 10px;
+          .transition(0.2s ease);
+          &:hover {
+            background-color: #F2EFF5;
+            color: #2C2541;
+            .transition(0.2s ease);
+            cursor: pointer;
+          }
+          &:active {
+            background-color: #FAF9FA;
+            .box-shadow(0 0 6px 0 #7d5bbe);
+          }
+        }
+        #backToChat {
+          left: 20px;
+        }
+        #refreshList {
+          right: 20px;
+        }
+      }
+      .chat-list-main {
+        height: 219px;
+        padding: 20px;
+        #loading {
+          text-align: center;
+          display: none;
+        }
+        .group {
+          margin-top: 20px;
+          line-height: 1.5;
+          display: none;
+          p {
+            word-wrap: break-word;
+            .span-for-ban {
+              color: silver;
+              &:hover {
+                cursor: pointer;
+                color: darken(silver, 20%);
+              }
+            }
+            .span-for-name {
+              text-decoration: underline;
+              color: #9441AC;
+              &:hover {
+                cursor: pointer;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

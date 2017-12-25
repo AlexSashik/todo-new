@@ -6,7 +6,7 @@
                 <?php
                 if (isset($_SESSION['user'])) {
                     echo '<p>Здравствуйте, <span>'.htmlspecialchars($_SESSION['user']['login']).'!</span></p>';
-                    if ($_SESSION['user']['access'] == 5) {
+                    if ($_SESSION['user']['role'] === 'admin') {
                         echo '<a href="/admin" class="animate">Admin</a> ';
                     }
                     echo '<a href="/cab" class="animate">My profile</a>';

@@ -11,3 +11,5 @@ if (isset($_SESSION['info'])) {
     }
     unset($_SESSION['info']);
 }
+
+//wtf($_SESSION['user']);
