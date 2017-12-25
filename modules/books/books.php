@@ -36,7 +36,7 @@ if (isset($_GET['id'])) {
         $ids = implode (', ', $ids_array);
         unset ($ids_array);
         list ($res, $how_total_pages) = Paginator::paginator_query('books', (int)$_GET['pagenumber'],"WHERE `id` IN (".$ids.")");
-        $get_id_auth = '&id='.$_GET['id'];
+        $get_id_auth = '?id='.$_GET['id'];
     }
 } else {
     list ($res, $how_total_pages) = Paginator::paginator_query('books', (int)$_GET['pagenumber']);

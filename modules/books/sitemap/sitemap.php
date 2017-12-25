@@ -1,5 +1,9 @@
 <?php
 return [
-    'books' => [],
+    'books' => [
+        'pagenumber' => [
+            'rules' => '[0-9]+',
+        ],
+    ],
     'authors' => [],
 ];

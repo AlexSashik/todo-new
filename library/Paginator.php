@@ -76,11 +76,11 @@ class Paginator {
         list($first_pag_number, $last_pag_number) = self::activeInterval($page, $how_total_pages);
 
         if (self::$shownewt && $previous_page !== false) {
-            $res_string .= "<a href=\"".$link."?pagenumber=".$previous_page.$get_id_auth."\" class=\"next animate\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i> Previous</a>";
+            $res_string .= "<a href=\"".$link."/".$previous_page.$get_id_auth."\" class=\"next animate\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i> Previous</a>";
         }
         if (Paginator::$shownumbers) {
             if ($first_pag_number != 1) {
-                $res_string .= "<a href='".$link."?pagenumber=1".$get_id_auth."' class = 'numbers animate'>1</a>";
+                $res_string .= "<a href='".$link."/1".$get_id_auth."' class = 'numbers animate'>1</a>";
                 if ($first_pag_number != 2) {
                     $res_string .= "<div class = 'ellipsis'>...</div>";
                 }
@@ -88,9 +88,9 @@ class Paginator {
 
             for ($i = $first_pag_number; $i <= $last_pag_number; $i++) {
                 if ($i != (int)$page) {
-                    $res_string .= "<a href='".$link."?pagenumber=".$i.$get_id_auth."' class = 'numbers animate'>".$i."</a>";
+                    $res_string .= "<a href='".$link."/".$i.$get_id_auth."' class = 'numbers animate'>".$i."</a>";
                 } else {
-                    $res_string .= "<a href='".$link."?pagenumber=".$i.$get_id_auth."' class = 'numbers animate pag_active'>".$i."</a>";
+                    $res_string .= "<a href='".$link."/".$i.$get_id_auth."' class = 'numbers animate pag_active'>".$i."</a>";
                 }
             }
 
@@ -98,11 +98,11 @@ class Paginator {
                 if ($last_pag_number + 1 != $how_total_pages) {
                     $res_string .= "<div class = 'ellipsis'>...</div>";
                 }
-                $res_string .= "<a href='".$link."?pagenumber=".$how_total_pages.$get_id_auth."' class = 'numbers animate'>".$how_total_pages."</a>";
+                $res_string .= "<a href='".$link."/".$how_total_pages.$get_id_auth."' class = 'numbers animate'>".$how_total_pages."</a>";
             }
         }
         if (self::$shownewt && $next_page !== false) {
-            $res_string .= '<a href="'.$link.'?pagenumber='.$next_page.$get_id_auth.'" class="next animate">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
+            $res_string .= '<a href="'.$link.'/'.$next_page.$get_id_auth.'" class="next animate">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
         }
 
         return $res_string;

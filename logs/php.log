@@ -463,4 +463,108 @@ Stack trace:
 at file D:\OSPanel\domains\todo-new\modules\books\books.php in line 42
 =================================================
 
+2017-12-25 10:59:09: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\library\Paginator.php in line 32
+=================================================
+
+2017-12-25 11:00:40: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\library\Paginator.php in line 32
+=================================================
+
+2017-12-25 11:03:12: Error: [Uncaught TypeError: Return value of FW\Form\FileSystem::delTree() must be an instance of FW\Form\void, none returned in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php:13
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(36): FW\Form\FileSystem::delTree('./skins/libs/fo...')
+#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(24): FW\Form\Form->install()
+#2 D:\OSPanel\domains\todo-new\modules\login\main.php(2): FW\Form\Form->__construct('authorization')
+#3 D:\OSPanel\domains\todo-new\index.php(223): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('login')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php in line 13
+=================================================
+
+2017-12-25 11:04:13: Error: [Uncaught TypeError: Return value of FW\Form\FileSystem::delTree() must be an instance of FW\Form\void, none returned in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php:13
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(36): FW\Form\FileSystem::delTree('./skins/libs/fo...')
+#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(24): FW\Form\Form->install()
+#2 D:\OSPanel\domains\todo-new\modules\login\main.php(2): FW\Form\Form->__construct('authorization')
+#3 D:\OSPanel\domains\todo-new\index.php(223): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('login')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php in line 13
+=================================================
+
+2017-12-25 11:04:35: Warning: [require(./modules/login/main1.php): failed to open stream: No such file or directory]
+at file D:\OSPanel\domains\todo-new\index.php in line 223
+=================================================
+
+2017-12-25 11:04:35: Complite error: [require(): Failed opening required './modules/login/main1.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
+at file D:\OSPanel\domains\todo-new\index.php in line 223
+=================================================
+
+2017-12-25 11:22:00: Error: [Uncaught Exception: Был передан массив, необходимо передавать строку in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:11
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\modules\cab\cab.php(43): trimAll(Array)
+#1 D:\OSPanel\domains\todo-new\index.php(223): require('D:\\OSPanel\\doma...')
+#2 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('cab')
+#3 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php in line 11
+=================================================
+
+2017-12-25 12:32:56: Error: [Uncaught Error: Class 'User' not found in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:338
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\modules\admin\main\view\main.tpl(1): isAdmin()
+#1 D:\OSPanel\domains\todo-new\index.php(229): require('D:\\OSPanel\\doma...')
+#2 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('admin')
+#3 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php in line 338
+=================================================
+
+2017-12-25 12:34:13: Warning: [move_uploaded_file(./img/default/users/100x100/20171225-123413img2665.png): failed to open stream: No such file or directory]
+at file D:\OSPanel\domains\todo-new\library\Uploader.php in line 42
+=================================================
+
+2017-12-25 12:34:13: Warning: [move_uploaded_file(): Unable to move 'D:\OSPanel\userdata\temp\php21C1.tmp' to './img/default/users/100x100/20171225-123413img2665.png']
+at file D:\OSPanel\domains\todo-new\library\Uploader.php in line 42
+=================================================
+
+2017-12-25 12:44:30: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 42
+=================================================
+
+2017-12-25 12:44:30: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\vendor\schoolphp\library\MyErrorHandler\MyErrorHandler.php:91)]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 43
+=================================================
+
+2017-12-25 12:44:42: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 42
+=================================================
+
+2017-12-25 12:44:42: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\vendor\schoolphp\library\MyErrorHandler\MyErrorHandler.php:91)]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 43
+=================================================
+
+2017-12-25 12:48:47: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 42
+=================================================
+
+2017-12-25 12:49:24: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 42
+=================================================
+
+2017-12-25 12:51:10: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 43
+=================================================
+
+2017-12-25 12:51:18: Notice: [Undefined index: module]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 43
+=================================================
+
+2017-12-25 13:00:21: Notice: [Undefined index: route]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 42
+=================================================
+
 

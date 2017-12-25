@@ -130,7 +130,7 @@
     <div id="info_text">
         <div class="info_header">Вход в систему выполнен</div>
         <div class="info_main">
-            <img src="/skins/img/admin/goods/check-icon.png" alt="">
+            <img src="/skins/img/default/check-icon.png" alt="">
             <p>Добро пожаловать, <?php echo htmlspecialchars($_SESSION['user']['login']);?>! Вы успешно авторизовались!</p>
             <div id="info_close">OK</div>
         </div>
