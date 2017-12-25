@@ -1,0 +1,25 @@
+.main {
+    width: 970px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+}
+
+.main h2 {
+    text-align: center;
+    color: #474747;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.main a {
+    color: #474747;
+}
+
+.main div {
+    margin-top: 20px;
+}
+
+.main img{
+    height: 40px;
+    margin: 0 5px -10px 0;
+}

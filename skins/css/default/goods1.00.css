@@ -1,0 +1,234 @@
+.main {
+    width: 970px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    word-wrap: break-word;
+}
+
+.cat_nav  {
+    width: 970px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.cat {
+    display: block;
+    float: left;
+    border: 1px solid #4CACD2;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px 10px 5px;
+}
+
+.cat:hover {
+    background-color: #4CACD2;
+    color: white;
+    cursor: pointer;
+}
+
+.row_of_goods {
+    border-spacing: 5px;
+}
+
+.main::after, .good::after, .cat_nav::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.main h2 {
+    text-align: center;
+    color: #474747;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.good {
+    display: table-cell;
+    max-width: 200px;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    word-wrap: break-word;
+    padding: 0 20px 20px 5px;
+    margin-left: 5px;
+}
+
+.good img {
+    display: block;
+    width: 200px;
+}
+
+.name {
+    display: block;
+    color: #6A96BD;
+}
+
+.name:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.price {
+    float: left;
+    margin-top: 10px;
+    font-size: 21px;
+    background-color: #FFF3B5;
+    color: #333333;
+    border-radius: 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+.in_sight {
+    background-color: #FFF3B5;
+    color: #333333;
+}
+
+.out_of_sight {
+    background-color: #EEEEEE;
+    color: #999999;
+}
+
+.price span {
+    font-size: 14px;
+    margin-left:3px;
+}
+
+.buy {
+    display: block;
+    float: right;
+    background-color: #67CD5D;
+    background: -moz-linear-gradient(#76D46C, #53C247);
+    background: -webkit-linear-gradient(#76D46C, #53C247);
+    background: -ms-linear-gradient(#76D46C, #53C247);
+    background: -o-linear-gradient(#76D46C, #53C247);
+    background: linear-gradient(#76D46C, #53C247);
+    border-bottom: 4px solid #3A9731;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin: 10px 0px 10px 5px;
+    box-shadow: 2px 2px 2px #AEEAA9;
+}
+
+.no_buy {
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buy:hover {
+    background-color: #4CE63D;
+    background: -moz-linear-gradient(#63F555, #29CF18);
+    background: -webkit-linear-gradient(#63F555, #29CF18);
+    background: -ms-linear-gradient(#63F555, #29CF18);
+    background: -o-linear-gradient(#63F555, #29CF18);
+    background: linear-gradient(#63F555, #29CF18);
+    border-bottom: 4px solid #40A436;
+}
+
+.search_not_found {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: silver;
+}
+
+/* description */
+
+.desc_img {
+    display: block;
+    width: 250px;
+}
+
+.desc_price_buy {
+    float: left;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    width: 250px;
+}
+
+.desc_price {
+    font-size: 2em;
+}
+
+.desc_price span {
+    font-size: 0.7em;
+}
+
+
+
+.desc_out_of_sight {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #999999;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+.desc_buy {
+    display: block;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: #67CD5D;
+    background: -moz-linear-gradient(#76D46C, #53C247);
+    background: -webkit-linear-gradient(#76D46C, #53C247);
+    background: -ms-linear-gradient(#76D46C, #53C247);
+    background: -o-linear-gradient(#76D46C, #53C247);
+    background: linear-gradient(#76D46C, #53C247);
+    border-bottom: 4px solid #3A9731;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px #AEEAA9;
+}
+
+.desc_buy:hover {
+    background-color: #4CE63D;
+    background: -moz-linear-gradient(#63F555, #29CF18);
+    background: -webkit-linear-gradient(#63F555, #29CF18);
+    background: -ms-linear-gradient(#63F555, #29CF18);
+    background: -o-linear-gradient(#63F555, #29CF18);
+    background: linear-gradient(#63F555, #29CF18);
+    border-bottom: 4px solid #40A436;
+}
+
+.desc_buy  i {
+    margin-right: 10px;
+}
+
+.desc_text {
+    float: left;
+    width: 640px;
+    margin-left: 29px;
+    border-left: 1px solid #EAEAEA;
+    padding-left: 20px;
+}
+
+.desc_text img {
+    display: block;
+    float: left;
+    margin: 0 5px 10px 5px;
+}
+
+.desc_back {
+    display: block;
+    background-color: #72AAD0;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 3px;
+    margin-top: 10px;
+    width: 160px;
+}
+
+.desc_back i {
+    margin-right: 10px;
+}
+
+.desc_back:hover {
+    background-color: #3A3A50;
+}

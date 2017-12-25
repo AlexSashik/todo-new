@@ -154,9 +154,9 @@ a {
   border-radius: 5px;
   font-size: 0.9em;
 }
-.header nav > a.active,
-.header nav > a:hover {
-  color: white;
+
+.active,.header nav > a:hover {
+  color: white !important;
   background-color: #5AAAD0;
   border: 1px solid #5AAAD0;
 }
