@@ -14,24 +14,13 @@ if (!isset($_SESSION['user'])) {
     }
 
     if (isset($_GET['hash'], $_GET['id']) ) {
-        $res = q("
-			SELECT * FROM `users`
-			WHERE `id` = '".(int)$_GET['id']."' AND `hash` = '".es($_GET['hash'])."'
-		");
-        if ($res->num_rows) {
-            $_SESSION['activation'] = true;
-            $row = $res->fetch_assoc();
-            q (" 
-				UPDATE `users` SET
-				`active` = '1',
-				`access` = '1',
-				`hash`   = ''
-				WHERE `id` = '".(int)$_GET['id']."'
-			");
+        $regist = new \FW\User\Registration;
+        if(!$regist->activate($_GET['id'],$_GET['hash'])) {
+            $_SESSION['activation'] = false;
             header ("Location: /cab");
             exit();
         } else {
-            $_SESSION['activation'] = false;
+            $_SESSION['activation'] = true;
             header ("Location: /cab");
             exit();
         }
@@ -48,61 +37,50 @@ if (!isset($_SESSION['user'])) {
         } elseif (mb_strlen(trim($_POST['login'])) > 50) {
             $errors['login_err'] = 'Cлишком длинный логин';
         } else {
-            $res = q("
-				SELECT * FROM `users`
-				WHERE	`login`    = '".es($_POST['login'])."'
-			");
-            if (!($res->num_rows)) {
-                $errors['login_err'] = 'Логин не зарегестрирован';
-                $res->close();
+            $auth = new \FW\User\Authorization;
+            $remember = (isset($_POST['remember']) ? true : false);
+
+            if($auth->authByLoginPass($_POST['login'],$_POST['pass'],$remember)) {
+                $_SESSION['info']['success_autoriz'] = true;
+                header("Location: /");
+                exit;
             } else {
-                $row = $res->fetch_assoc();
-                $res->close();
-                $errors['login_err'] = false;
-                if (myHash($_POST['pass']) != $row['pass']) {
+                if (isset($auth->errors['login'])) {
+                    $errors['login_err'] = 'Логин не зарегестрирован';
+                } elseif (isset($auth->errors['password'])) {
+                    $errors['login_err'] = false;
                     $errors['pass_err'] = 'Неправильно введенный пароль';
-                } elseif ($row['active'] == 0) {
-                    unset ($errors['login_err']);
-                    $errors['active_err']['header'] = 'Активация аккаунта';
-                    $errors['active_err']['img']    = '/img/admin/goods/attantion.png';
-                    $errors['active_err']['text']   = 'Ваш аккаунт не активирован. Для его активации перейдите по ссылке, указанной в письме, отправленном на email, который Вы указали при регистрации';
-//				} elseif ($row['access'] == 0) {
-//					unset ($errors['login_err']);
-//					$errors['active_err']['header'] = 'Вход не выполнен';
-//					$errors['active_err']['img']    = '/img/admin/goods/error.png';
-//					$errors['active_err']['text']   = 'Приносим наши извинения, но Вы были забанены администратором сайта.';
                 } else {
-                    $_SESSION['info']['success_autoriz'] = true;
-                    $_SESSION['user'] = $row;
-                    if (isset ($_POST['remember']) ) {
-                        setcookie ('id', $row['id'], time() + 60 * 60 * 24 * 30, "/");
-                        setcookie ('hash', myHash($_SERVER['REMOTE_ADDR']),time() + 60 * 60 * 24 * 30, "/");
-                        q ("
-							UPDATE `users` SET
-							`hash` = '".es(myHash($_SERVER['REMOTE_ADDR']))."'
-							WHERE `id` = '".(int)$row['id']."'
-						");
-                    }
-                    header("Location: /");
-                    exit;
+                    $errors['active_err']['header'] = 'Активация аккаунта';
+                    $errors['active_err']['img']    = '/skins/img/admin/goods/attantion.png';
+                    $errors['active_err']['text']   = '
+                    Ваш аккаунт не активирован. Для его активации перейдите по 
+                    ссылке, указанной в письме, отправленном на email, который Вы указали при регистрации';
                 }
+                $_SESSION['wrong-form']['time'] = time();
+                $_SESSION['wrong-form']['key'] = (isset($_SESSION['wrong-form']['key']) ? ($_SESSION['wrong-form']['key']+1) : 1);
             }
         }
     }
 } else {
     CORE::$META['title']  = 'Todo - cabinet';
-    foreach ($_SESSION['user'] as $k => $v) {
-        $user[$k] = $v;
-    }
-    if (empty($user['avatar'])) {
-        $user['avatar'] = 'noavatar.png';
-    }
-
     if (isset($_SESSION['info'])) {
         $info_name = $_SESSION['info'][0];
         $info_text  = $_SESSION['info'][1];
         $info_type  = $_SESSION['info'][2];
         unset($_SESSION['info']);
+    }
+
+    $res = q ("
+		SELECT * FROM `fw_users`
+		WHERE `id` = ".(int)$_SESSION['user']['id']."
+	");
+    $user = $res->fetch_assoc();
+    foreach ($user as $k => $v) {
+        $user[$k] = $v;
+    }
+    if (empty($user['avatar'])) {
+        $user['avatar'] = 'noavatar.png';
     }
 
     if (isset($_POST['login'], $_POST['email'], $_POST['age'], $_POST['pass'], $_POST['pass_repeat'], $_FILES['file'])) {

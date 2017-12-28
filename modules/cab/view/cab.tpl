@@ -46,7 +46,7 @@
                     if($activation) {
                         echo '<p>Активация Вашего аккаунта прошла успешно. Для входа на сайт заполните поля авторизации.</p>';
                     } else {
-                        echo '<p>Вы перешли по несуществующей ссылке. Активация Вашего аккаунта не завершена!</p>';
+                        echo '<p>Вы перешли по несуществующей ссылке.</p>';
                     }
                     ?>
                     <div id="info_close">OK</div>
@@ -98,7 +98,7 @@
                     <input id="email" class="lep <?php if (isset($err['email'])) echo 'bg_err';?>" type="email" name="email" value="<?php echo htmlspecialchars($user['email']);?>">
                     <div class="clear"></div>
                     <label class="label_for_info" for="age">Возраст:</label>
-                    <input id="age" <?php if (isset($err['age'])) echo 'class="bg_err"';?> type="text" name="age" value="<?php if ($_SESSION['user']['age']) echo htmlspecialchars($user['age']);?>">
+                    <input id="age" <?php if (isset($err['age'])) echo 'class="bg_err"';?> type="text" name="age" value="<?php if ($user['age']) echo htmlspecialchars($user['age']);?>">
                     <div class="clear"></div>
                     <p>Изменить пароль</p>
                     <?php

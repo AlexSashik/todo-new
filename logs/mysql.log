@@ -41,3 +41,15 @@
 --date: 2017-12-25 21:39:47
 ===================================
 
+
+			INSERT INTO `fw_users` SET
+			`login` = 'Alex',
+			`password` = '$2y$10$4GdiH/.skQc1nH36ebHETeR3EHNI3ivldM9hOql0o/u4MFPqwK2qm',
+			`email` = 'asd@asd.dsa'
+		
+--Field 'date' doesn't have a default value
+--file: D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+--line: 12
+--date: 2017-12-27 22:37:44
+===================================
+

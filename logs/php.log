@@ -811,4 +811,960 @@ at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 100
 at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 110
 =================================================
 
+2017-12-27 22:05:06: Error: [Uncaught TypeError: Return value of FW\Form\FileSystem::delTree() must be an instance of FW\Form\void, none returned in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php:13
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(36): FW\Form\FileSystem::delTree('./skins/libs/fo...')
+#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(24): FW\Form\Form->install()
+#2 D:\OSPanel\domains\todo-new\modules\login\main.php(2): FW\Form\Form->__construct('authorization')
+#3 D:\OSPanel\domains\todo-new\index.php(223): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('login')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php in line 13
+=================================================
+
+2017-12-27 22:05:08: Error: [Uncaught TypeError: Return value of FW\Form\FileSystem::delTree() must be an instance of FW\Form\void, none returned in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php:13
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(36): FW\Form\FileSystem::delTree('./skins/libs/fo...')
+#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(24): FW\Form\Form->install()
+#2 D:\OSPanel\domains\todo-new\modules\login\main.php(2): FW\Form\Form->__construct('authorization')
+#3 D:\OSPanel\domains\todo-new\index.php(223): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('login')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php in line 13
+=================================================
+
+2017-12-27 22:05:17: Error: [Uncaught TypeError: Return value of FW\Form\FileSystem::delTree() must be an instance of FW\Form\void, none returned in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php:13
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(36): FW\Form\FileSystem::delTree('./skins/libs/fo...')
+#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\Form.php(24): FW\Form\Form->install()
+#2 D:\OSPanel\domains\todo-new\modules\login\main.php(2): FW\Form\Form->__construct('authorization')
+#3 D:\OSPanel\domains\todo-new\index.php(223): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('login/main')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Form\FileSystem.php in line 13
+=================================================
+
+2017-12-27 22:06:12: Notice: [Undefined variable: form]
+at file D:\OSPanel\domains\todo-new\modules\login\view\main.tpl in line 7
+=================================================
+
+2017-12-27 22:06:12: Error: [Uncaught Error: Call to a member function view() on null in D:\OSPanel\domains\todo-new\modules\login\view\main.tpl:7
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(229): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('login/main')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\login\view\main.tpl in line 7
+=================================================
+
+2017-12-27 22:41:12: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 47
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 22
+                    [function] => sendActivate
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => 2
+                            [1] => 6978b57430286ca761be7e1d8585e739
+                            [2] => asd@asd.dsa
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 51
+                    [function] => regist
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Alex
+                            [1] => 123
+                            [2] => asd@asd.dsa
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [5] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php in line 50
+=================================================
+
+2017-12-27 22:43:25: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 47
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 22
+                    [function] => sendActivate
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => 3
+                            [1] => 7b9907f360a6c2e10d765e5a323b0df6
+                            [2] => espiritudelnumero@gmail.com
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 51
+                    [function] => regist
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Alex
+                            [1] => 123
+                            [2] => espiritudelnumero@gmail.com
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [5] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php in line 50
+=================================================
+
+2017-12-27 22:56:31: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 7
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\modules\cab\reg.php in line 10
+=================================================
+
+2017-12-27 22:56:44: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 7
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\modules\cab\reg.php in line 10
+=================================================
+
+2017-12-27 22:57:24: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 7
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\modules\cab\reg.php in line 10
+=================================================
+
+2017-12-27 22:58:14: User Notice: [Ошибка: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 7
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\modules\cab\reg.php in line 10
+=================================================
+
+2017-12-27 22:59:17: User Notice: [Ошибка: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 7
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\modules\cab\reg.php in line 10
+=================================================
+
+2017-12-27 23:00:14: User Notice: [Ошибка: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\main\main.php
+                    [line] => 7
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\main\main.php
+                        )
+
+                    [function] => require
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => 
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\modules\main\main.php in line 10
+=================================================
+
+2017-12-28 21:43:37: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 84
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 22
+                    [function] => sendActivate
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => 2
+                            [1] => e4f2ddb5ae5d82f871fadcda0b94cde0
+                            [2] => asd@asd.dsa
+                            [3] => Alex
+                            [4] => 123
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 51
+                    [function] => regist
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => Alex
+                            [1] => 123
+                            [2] => asd@asd.dsa
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [5] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php in line 87
+=================================================
+
+2017-12-28 22:04:12: Notice: [Undefined index: password]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 43
+=================================================
+
+2017-12-28 22:29:27: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 76
+=================================================
+
+2017-12-28 22:29:27: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 95
+=================================================
+
+2017-12-28 22:29:27: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 98
+=================================================
+
+2017-12-28 22:29:27: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:29:27: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 119
+=================================================
+
+2017-12-28 22:32:39: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 76
+=================================================
+
+2017-12-28 22:32:39: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 95
+=================================================
+
+2017-12-28 22:32:39: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 98
+=================================================
+
+2017-12-28 22:32:39: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:32:40: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 119
+=================================================
+
+2017-12-28 22:33:21: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:34:16: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:34:52: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:37:47: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:40:08: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:46:26: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 76
+=================================================
+
+2017-12-28 22:46:26: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 95
+=================================================
+
+2017-12-28 22:46:26: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 98
+=================================================
+
+2017-12-28 22:46:26: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:46:26: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 119
+=================================================
+
+2017-12-28 22:46:40: Notice: [Undefined index: email]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 98
+=================================================
+
+2017-12-28 22:46:40: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:46:40: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 119
+=================================================
+
+2017-12-28 22:51:36: Notice: [Undefined index: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 80
+=================================================
+
+2017-12-28 22:51:36: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 80
+=================================================
+
+2017-12-28 22:51:36: Notice: [Undefined index: login]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 95
+=================================================
+
+2017-12-28 22:51:36: Notice: [Undefined index: email]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 98
+=================================================
+
+2017-12-28 22:51:36: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:51:36: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 119
+=================================================
+
+2017-12-28 22:52:04: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:53:45: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:54:15: Notice: [Undefined index: age]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:56:21: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 76
+=================================================
+
+2017-12-28 22:56:21: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 95
+=================================================
+
+2017-12-28 22:56:21: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 98
+=================================================
+
+2017-12-28 22:56:21: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 101
+=================================================
+
+2017-12-28 22:56:21: Notice: [Undefined variable: user]
+at file D:\OSPanel\domains\todo-new\modules\cab\view\cab.tpl in line 119
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 4
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 100
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 110
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 100
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 110
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 100
+=================================================
+
+2017-12-28 23:02:48: Notice: [Undefined index: access]
+at file D:\OSPanel\domains\todo-new\modules\comments\view\main.tpl in line 110
+=================================================
+
+2017-12-28 23:21:22: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\modules\_allmodules.php:38)]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 39
+=================================================
+
+2017-12-28 23:22:27: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\modules\_allmodules.php:39)]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 40
+=================================================
+
 

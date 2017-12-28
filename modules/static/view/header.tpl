@@ -35,8 +35,8 @@
                     <a href="/games/cities" class="animate">the cities</a>
                 </div>
                 <div id="demo_nav">
-                    <a href="/demo" target="_blank" class="animate">agrolux</a>
-                    <a href="/vatel" target="_blank" class="animate">vatel</a>
+                    <a href="http://agrolux.todo.kh.ua" target="_blank" class="animate">agrolux</a>
+                    <a href="http://vatel.todo.kh.ua" target="_blank" class="animate">vatel</a>
                 </div>
             </nav>
         </div>

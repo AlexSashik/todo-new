@@ -29,14 +29,6 @@
             ?>
             <div class="clear"></div>
 
-            <label for="age">Возраст</label>
-            <input id="age" type="text" name="age" <?php if (isset($_POST['age'])) echo 'value="'.htmlspecialchars($_POST['age']).'"';?>>
-            <?php
-            if (isset($errors['age_err'])) {
-                echo '<div id="age_err" class="info_err"><i class="fa fa-times" aria-hidden="true"></i>'.$errors['age_err'].'</div>';
-            }
-            ?>
-            <div class="clear"></div>
         </div>
         <div class="reg_footer">
             <input class="submit" type="submit" name="reg" value="Зарегистрироваться">
