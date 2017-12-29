@@ -50,6 +50,12 @@ if (!isset($_SESSION['user'])) {
                 } elseif (isset($auth->errors['password'])) {
                     $errors['login_err'] = false;
                     $errors['pass_err'] = 'Неправильно введенный пароль';
+                } elseif (isset($auth->errors[0]) && $auth->errors[0] == 'ip-defender') {
+                    $errors['active_err']['header'] = 'Активация аккаунта';
+                    $errors['active_err']['img']    = '/skins/img/admin/goods/attantion.png';
+                    $errors['active_err']['text']   = '
+                    Ваш пытались авторизироваться более 10 раз подряд. 
+                    Следующая попытка будет доступна через 15 минут';
                 } else {
                     $errors['active_err']['header'] = 'Активация аккаунта';
                     $errors['active_err']['img']    = '/skins/img/admin/goods/attantion.png';
@@ -71,30 +77,13 @@ if (!isset($_SESSION['user'])) {
         unset($_SESSION['info']);
     }
 
-    $res = q ("
-		SELECT * FROM `fw_users`
-		WHERE `id` = ".(int)$_SESSION['user']['id']."
-	");
-    $user = $res->fetch_assoc();
-    foreach ($user as $k => $v) {
-        $user[$k] = $v;
-    }
-    if (empty($user['avatar'])) {
-        $user['avatar'] = 'noavatar.png';
-    }
-
     if (isset($_POST['login'], $_POST['email'], $_POST['age'], $_POST['pass'], $_POST['pass_repeat'], $_FILES['file'])) {
         $_POST = trimAll($_POST,1);
-        foreach ($user as $k => $v) {
-            if (isset($_POST[$k]) && !empty($_POST[$k])) {
-                $user[$k] = $_POST[$k];
-            }
-        }
 
         //Проверка логина
         if (empty($_POST['login']) || mb_strlen($_POST['login'], 'utf-8') > 30) {
             $err['login'] = true;
-        }  elseif (!checkUnique('users', 'login', $_POST['login']) && $_POST['login'] != $user['login']) {
+        }  elseif (!checkUnique('fw_users', 'login', $_POST['login']) && $_POST['login'] != User::$data['login']) {
             $err['login'] = true;
             $err['gen_info'] = 'Логин занят';
         }
@@ -102,7 +91,7 @@ if (!isset($_SESSION['user'])) {
         //Проверка email
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) || mb_strlen($_POST['email'],'utf-8') > 50) {
             $err['email'] = true;
-        } elseif (!checkUnique('users', 'email', $_POST['email']) && $_POST['email'] != $user['email']) {
+        } elseif (!checkUnique('fw_users', 'email', $_POST['email']) && $_POST['email'] != User::$data['email']) {
             $err['email'] = true;
             if (isset($err['gen_info'])) {
                 $err['gen_info'] = 'Логин и email занят';
@@ -131,7 +120,7 @@ if (!isset($_SESSION['user'])) {
             } elseif (mb_strlen($_POST['pass'], 'utf-8') > 50) {
                 $err['pass'] = 'Длинный пароль';
             } else {
-                $pass_string = "`pass` = '".es(myHash($_POST['pass']))."',";
+                $pass_string = "`password` = '".es(password_hash(($_POST['pass']),PASSWORD_DEFAULT))."',";
             }
         } else {
             $pass_string = "";
@@ -154,31 +143,31 @@ if (!isset($_SESSION['user'])) {
             if (isset($photo_name)) {
                 q ("
 					UPDATE `comments` SET
-					`login`   = '".es($user['login'])."',
+					`login`   = '".es($_POST['login'])."',
 					`avatar` = '".es($photo_name)."'
-					WHERE `user_id` = '".(int)$user['id']."'
+					WHERE `user_id` = '".(int)User::$data['id']."'
 				");
-                if ($user['avatar'] != 'noavatar.png') {
-                    if (file_exists('./skins/img/default/users/100x100/'.$user['avatar'])) unlink('./skins/img/default/users/100x100/'.$user['avatar']);
+                if (!empty(User::$data['avatar'])) {
+                    if (file_exists('./skins/img/default/users/100x100/'.User::$data['avatar'])) unlink('./skins/img/default/users/100x100/'.User::$data['avatar']);
                 }
                 $ava_string = "`avatar` = '".es($photo_name)."',";
             } else {
                 q ("
 					UPDATE `comments` SET
-					`login`   = '".es($user['login'])."'
-					WHERE `user_id` = '".(int)$user['id']."'
+					`login`   = '".es($_POST['login'])."'
+					WHERE `user_id` = '".(int)User::$data['id']."'
 				");
                 $ava_string = "";
             }
 
             q ("
-				UPDATE `users` SET
+				UPDATE `fw_users` SET
 				".$age_string."
 				".$pass_string."
 				".$ava_string."
 				`login`   	  = '".es($_POST['login'])."',
 				`email` 	  = '".es($_POST['email'])."'
-				WHERE `id`    = ".(int)$user['id']."
+				WHERE `id`    = ".(int)User::$data['id']."
 			");
             $_SESSION['info'] = array('Редактирование профиля', 'Профиль успешно отредактирован!', 'success');
             header ("Location: /cab");

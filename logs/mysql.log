@@ -53,3 +53,18 @@
 --date: 2017-12-27 22:37:44
 ===================================
 
+
+				UPDATE `fw_users` SET
+				`age` = '23',
+				`pass` = '$2y$10$Mq2VQjnGYLLM8H2Q2fGTV.XlxOwIOFzLeF4ZAlIVb6.UnWWR7mISq',
+				
+				`login`   	  = 'Alex',
+				`email` 	  = 'alexander.konstantinov2010@yandex.ua'
+				WHERE `id`    = 2
+			
+--Unknown column 'pass' in 'field list'
+--file: D:\OSPanel\domains\todo-new\modules\cab\cab.php
+--line: 170
+--date: 2017-12-29 13:23:06
+===================================
+
