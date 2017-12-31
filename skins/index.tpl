@@ -9,7 +9,7 @@
         <meta name="apple-mobile-web-app-title" content="<?php echo hc(Core::$META['title']); ?>">
         <meta name="description" content="<?php echo hc(Core::$META['description']); ?>">
         <meta name="keywords" content="<?php echo hc(Core::$META['keywords']); ?>">
-        <meta name="author" content="Усков Станислав">
+        <meta name="author" content="Александр Константинов">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="format-detection" content="telephone=no">
         <meta name="format-detection" content="address=no">

@@ -78,6 +78,7 @@ class Uploader {
     }
 
     static function my_imagecopyresampled ($to, $from, $new_width, $new_height, $old_width, $old_height, $mime_type) {
+
         $image_new = imagecreatetruecolor($new_width, $new_height);
 
         if ($mime_type == 'image/gif') {
@@ -104,7 +105,7 @@ class Uploader {
         imagedestroy($image_new);
     }
 
-    static function resize ($frame_width, $frame_height, $img, $compress_by = 'full', $expantion_by = false, $to = false) {
+    static function resize ($frame_width, $frame_height, $img, $compress_by = 'full', $expantion_by = 'width', $to = false) {
 
         $key_array = array_keys($img);
         $needed_keys = array ('img_src', 'width', 'height', 'mime');
@@ -121,7 +122,6 @@ class Uploader {
         }
         $old_width  = $img['width'];
         $old_height = $img['height'];
-
         // ресайз типа "сжатие"
         if ($frame_width <= $old_width || $frame_height <= $old_height) {
             if ($compress_by == 'full') {
@@ -165,6 +165,7 @@ class Uploader {
             $new_width  = $old_width*$frame_height/$old_height;
             $new_height = $frame_height;
             self::my_imagecopyresampled($to, $img['img_src'], $new_width, $new_height, $old_width, $old_height, $img['mime']);
+
         }
     }
 

@@ -4,7 +4,7 @@ if (!isset($_GET['ajax'])) {
     exit;
 }
 
-if (!isset($_SESSION['user'])) {
+if (!isset(User::$data)) {
     if (isset($_POST['login'], $_POST['email'], $_POST['text']) ) {
         $_POST = trimAll ($_POST,1);
         $response = array(
@@ -52,18 +52,18 @@ if (!isset($_SESSION['user'])) {
 } else {
     // добавление комментария
     if (isset($_POST['text']))  {
-        if ($_SESSION['user']['access'] == 0) {
+        if (User::$data['role'] == 'ban') {
             $response['err']['access'] = 'Вы забанены администратором сайта и не можете оставлять комментарии.';
             echo json_encode($response);
             exit;
         }
 
         $_POST = trimAll ($_POST,1);
-        $img_name = (empty($_SESSION['user']['avatar'])) ? 'noavatar.png' : $_SESSION['user']['avatar'];
-        $status   = ( $_SESSION['user']['access'] == 5 ) ? 'администратор' : 'пользователь';
+        $img_name = (empty(User::$data['avatar'])) ? 'noavatar.png' : User::$data['avatar'];
+        $status   = ( User::$data['role'] == 'admin' ) ? 'администратор' : 'пользователь';
         $response = array(
-            'login' => htmlspecialchars($_SESSION['user']['login']),
-            'email' => htmlspecialchars($_SESSION['user']['email']),
+            'login' => htmlspecialchars(User::$data['login']),
+            'email' => htmlspecialchars(User::$data['email']),
             'text'  => htmlspecialchars($_POST['text']),
             'time'  => date("Y-m-d H:i:s"),
             'status' => $status,
@@ -75,15 +75,24 @@ if (!isset($_SESSION['user'])) {
         }
 
         if ( !array_key_exists ('err', $response) ) {
+            function status2int ($status) {
+                if ($status == 'admin') {
+                    return 5;
+                } elseif ($status == 'user') {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
             $res = q("
 				INSERT INTO `comments` SET
-				`user_id`  = '".(int)$_SESSION['user']['id']."',
-				`login`    = '".es($_SESSION['user']['login'])."',
-				`email`    = '".es($_SESSION['user']['email'])."',
-				`avatar`   = '".es($_SESSION['user']['avatar'])."',
+				`user_id`  = '".(int)User::$data['id']."',
+				`login`    = '".es(User::$data['login'])."',
+				`email`    = '".es(User::$data['email'])."',
+				`avatar`   = '".es(User::$data['avatar'])."',
 				`text`     = '".es($_POST['text'])."',
 				`date`     = NOW(),
-				`status`   = ".$_SESSION['user']['access']."
+				`status`   = ".status2int(User::$data['role'])."
 			");
             $response['id'] = DB::_()->insert_id;
         }
@@ -94,7 +103,7 @@ if (!isset($_SESSION['user'])) {
     }
 
     //редактирование комментария
-    if ($_SESSION['user']['access'] == 5 && isset($_POST['edit_id'], $_POST['edit_text'])) {
+    if (User::$data['role'] == 'admin' && isset($_POST['edit_id'], $_POST['edit_text'])) {
         $res = q("
             SELECT * FROM `comments`
             WHERE `id` = ".(int)$_POST['edit_id']."

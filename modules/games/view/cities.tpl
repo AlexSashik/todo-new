@@ -30,7 +30,7 @@
             <p class="first_line">
                 <strong>
                     <?php
-                    if (isset($_SESSION['user'])) echo htmlspecialchars($_SESSION['user']['login']); else echo 'Пользователь'
+                    if (isset(User::$data)) echo htmlspecialchars(User::$data['login']); else echo 'Пользователь'
                     ?>
                 </strong>
             </p>

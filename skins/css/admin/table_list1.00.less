@@ -1,0 +1,31 @@
+@import "../lesshat/lesshat.less";
+
+.text-silver {
+  color: silver;
+}
+
+.not-found {
+  margin: 20px 0 10px 0;
+  font-size: 2em;
+  color: silver;
+}
+
+.table-responsive{
+  border: 5px solid white;
+}
+
+.table-header {
+  .background-image(linear-gradient(to bottom, #F7F8F7 0%,#EBECEB 100%));
+  padding: 10px 20px;
+  span {
+    font-size: 20px;
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+table>thead>tr>td {
+  vertical-align: middle !important;
+}

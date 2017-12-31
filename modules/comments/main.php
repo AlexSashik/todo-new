@@ -5,7 +5,7 @@ CORE::$END = '
 ';
 CORE::$META['title']  = 'Todo - comments';
 
-if (isset($_GET['action'], $_GET['id'], $_SESSION['user']) &&  $_GET['action'] == 'delete' && $_SESSION['user']['access'] == 5) {
+if (isset($_GET['action'], $_GET['id'], User::$data) &&  $_GET['action'] == 'delete' && User::$data['role'] == 'admin') {
     $res = q ("
         SELECT * FROM `comments`
         WHERE `id` = ".(int)$_GET['id']." 

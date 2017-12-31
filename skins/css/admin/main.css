@@ -1,0 +1,338 @@
+.main {
+    background-color: #fff;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    color: #474747;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    text-indent: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/*Всплывающий блок*/
+
+#info_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+#info_text {
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    width: 500px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px black;
+    background-color: white;
+}
+
+.info_header {
+    background-color: #149B49;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.info_main {
+    text-align: center;
+    padding: 20px;
+}
+
+.info_main  img {
+    width: 75px;
+}
+
+.info_main p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.info_main p a {
+    color: #383838;
+}
+
+.info_main p a:hover {
+    color: #57A7CE;
+}
+
+#info_close {
+    background-color: #01882E;
+    color: white;
+    padding: 10px 0 10px 0;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#info_close:hover {
+    cursor: pointer;
+    background-color: #149B49;
+}
+
+/* Блок авторизации */
+
+.main_cab {
+    width: 460px;
+    margin: 0 auto;
+    padding-top: 10px;
+    word-wrap: break-word;
+    background-color: #242328;
+    margin-top: 120px;
+    -webkit-border-radius: 10px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px;
+    -moz-background-clip: padding;
+    border-radius: 10px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 5px 20px #000;
+    -moz-box-shadow: 0 5px 20px #000;
+    box-shadow: 0 5px 20px #000;
+}
+.main_cab h2 {
+    text-align: center;
+    color: #586069;
+    font-size: 1.2em;
+    margin: 20px 0;
+    font-weight: lighter;
+}
+.main_cab form {
+    background-color: #1F1E23;
+    border-top: 1px solid #2D2F32;
+    border-bottom: 1px solid #2D2F32;
+    padding: 20px 20px 15px 20px;
+}
+.main_cab form .logpas[type="text"] {
+    -webkit-border-radius: 5px 5px 0 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px 5px 0 0;
+    -moz-background-clip: padding;
+    border-radius: 5px 5px 0 0;
+    background-clip: padding-box;
+}
+.main_cab form .logpas {
+    width: 415px;
+    padding: 15px 20px;
+    background-color: #DAF4FE;
+    border: none;
+}
+.main_cab form .logpas[type="password"] {
+    border-top: 1px solid #ACABAB;
+    -webkit-border-radius: 0 0 5px 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 0 5px 5px;
+    -moz-background-clip: padding;
+    border-radius: 0 0 5px 5px;
+    background-clip: padding-box;
+}
+.main_cab form .submit {
+    width: 415px;
+    padding: 15px 20px;
+    background-color: #00AEEF;
+    border: none;
+    -webkit-border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    background-clip: padding-box;
+    margin-top: 15px;
+    color: white;
+    font-size: 1.2em;
+}
+.main_cab form .submit:hover {
+    cursor: pointer;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjMjNjM2ZmIiBzdG9wLW9wYWNpdHk9IjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMEFFRUYiIHN0b3Atb3BhY2l0eT0iMSIvPjwvbGluZWFyR3JhZGllbnQ+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNsZXNzaGF0LWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+    background-image: -webkit-linear-gradient(top, #23c3ff 50%, #00AEEF);
+    background-image: -moz-linear-gradient(top, #23c3ff 50%, #00AEEF);
+    background-image: -o-linear-gradient(top, #23c3ff 50%, #00AEEF);
+    background-image: linear-gradient(to bottom, #23c3ff 50%, #00AEEF);
+}
+.main_cab .footer div {
+    float: left;
+    margin: 0 30px;
+    color: #586069;
+    height: 90px;
+    line-height: 90px;
+}
+.main_cab .footer .img {
+    display: block;
+    background: url(/skins/img/admin/cab/sprites.png) no-repeat;
+    background-position: 1px 1px;
+    -webkit-border-radius: 0 0 5px 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0 0 5px 0;
+    -moz-background-clip: padding;
+    border-radius: 0 0 5px 0;
+    background-clip: padding-box;
+    float: right;
+    width: 189px;
+    height: 97px;
+    border: 10px solid #242328;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.main_cab .footer .img:hover {
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    background-color: #2C3031;
+    border: 10px solid #2C3031;
+}
+.main_cab .footer::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+/*Всплывающий центральный блок*/
+#info_back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+#info_text {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    width: 500px;
+    transform: translateX(-50%);
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px black;
+    background-color: #333;
+    color: #ccc;
+    zoom: 1;
+    filter: alpha(opacity=90);
+    -webkit-opacity: 0.9;
+    -moz-opacity: 0.9;
+    opacity: 0.9;
+    -webkit-border-radius: 10px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px;
+    -moz-background-clip: padding;
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+.info_header {
+    background-color: #586069;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 18px;
+}
+.info_main {
+    padding: 20px;
+}
+.info_main img {
+    display: block;
+    width: 75px;
+    float: left;
+}
+.info_main div {
+    font-weight: bold;
+    font-size: 16px;
+    float: left;
+    padding-left: 10px;
+    width: 375px;
+}
+.info_main div a {
+    color: #383838;
+}
+.info_main div a:hover {
+    color: #57A7CE;
+}
+.info_main::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+#info_close {
+    text-align: center;
+    background-color: #586069;
+    color: white;
+    padding: 10px 0 10px 0;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -webkit-border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    background-clip: padding-box;
+}
+#info_close:hover {
+    cursor: pointer;
+    background-color: #4c535b;
+}
+/*Всплывающий правый блок*/
+#info_err {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #464645;
+    -webkit-border-radius: 10px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 10px;
+    -moz-background-clip: padding;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid #B32B2B;
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    font-family: serif;
+}
+#info_err::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+#info_err #info_err_close {
+    background: url(/skins/img/admin/cab/sprites.png) no-repeat;
+    background-position: -174px -36px;
+    margin: 2px;
+    float: right;
+    width: 25px;
+    height: 25px;
+}
+#info_err .content .img {
+    background: url(/skins/img/admin/cab/sprites.png) no-repeat;
+    background-position: -170px 3px;
+    float: left;
+    width: 35px;
+    height: 35px;
+    margin: 23px 0 0 15px;
+}
+#info_err .content .text {
+    float: left;
+    margin: 5px 20px 25px 10px;
+}

@@ -1,7 +1,7 @@
 <script>
     var status = <?php
-        if (isset($_SESSION['user'])) {
-            if ($_SESSION['user']['access'] == 5) {
+        if (isset(User::$data)) {
+            if (User::$data['role'] == 'admin') {
                 echo 5;
             } else {
                 echo 1;
@@ -36,13 +36,13 @@
 
         <div class="photo">
             <?php
-            if (isset($_SESSION['user'])) {
-                if (!empty($_SESSION['user']['avatar'])) {
-                    echo '<img alt="" src="/skins/img/default/users/100x100/'.htmlspecialchars($_SESSION['user']['avatar']).'">';
+            if (isset(User::$data)) {
+                if (!empty(User::$data['avatar'])) {
+                    echo '<img alt="" src="/skins/img/default/users/100x100/'.htmlspecialchars(User::$data['avatar']).'">';
                 } else {
                     echo '<img alt="" src="/skins/img/default/users/100x100/noavatar.png">';
                 }
-                echo '<br>'.htmlspecialchars($_SESSION['user']['login']);
+                echo '<br>'.htmlspecialchars(User::$data['login']);
             } else {
                 echo '<img alt="" src="/skins/img/default/users/100x100/noavatar.png">';
             }
@@ -50,7 +50,7 @@
         </div>
         <div class="field">
             <?php
-            if (!isset($_SESSION['user'])) {
+            if (!isset(User::$data)) {
                 ?>
                 <input id="login" type="text" name="login" placeholder="Ваше имя..." class="login_email">
                 <div id="login_err" class="err_div"></div>
@@ -97,7 +97,7 @@
                 </span>
                 </div>
                 <?php
-                if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 5) {
+                if (isset(User::$data) && User::$data['role'] == 'admin') {
                     echo '<span id="text'.(int)$row['id'].'" contenteditable>'.nl2br(htmlspecialchars($row['text'])).'</span>';
                 } else {
                     echo nl2br(htmlspecialchars($row['text']));
@@ -107,7 +107,7 @@
                 <span class="time">Опубликовано <?php echo htmlspecialchars($row['date']);?></span>
             </div>
             <?php
-            if (isset($_SESSION['user']) && $_SESSION['user']['access'] == 5 ) {
+            if (isset(User::$data) && User::$data['role'] == 'admin' ) {
                 echo '<a onclick="return confirm (\'Вы точно хотите удалить данный комментарий?\')"  title="Удалить комментарий" href="/comments?action=delete&id='.(int)$row['id'].'" class="delete"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>';
                 echo '<span onclick="return edit(this)" title="Редактировать комментарий" data-id="'.(int)$row['id'].'" class="edit"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></span>';
             }

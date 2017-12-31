@@ -9,7 +9,7 @@
 	<meta name="apple-mobile-web-app-title" content="<?php echo hc(Core::$META['title']); ?>">
 	<meta name="description" content="<?php echo hc(Core::$META['description']); ?>">
 	<meta name="keywords" content="<?php echo hc(Core::$META['keywords']); ?>">
-	<meta name="author" content="Усков Станислав">
+	<meta name="author" content="Александр Константинов">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="format-detection" content="address=no">
@@ -38,7 +38,8 @@
 	<link rel="apple-touch-icon" sizes="120x120" href="/touch-icon-iphone-retina.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad-retina.png">
 	<link href="/skins/components/bootstrap/bootstrap.min.css" rel="stylesheet">
-	<link href="/skins/components/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/skins/components/bootstrap/bootstrap-theme.min.css" type = "text/css">
+	<link href="/skins/css/font-awesome.min.css" rel="stylesheet">
 	<link href="/skins<?php echo Core::$SKIN;?>/css/admin.min.css" rel="stylesheet">
 	<script>
 		var antixsrf = '<?php echo (isset($_SESSION['antixsrf']) ? $_SESSION['antixsrf'] : 'no'); ?>';
@@ -51,45 +52,100 @@
 	<script src="/skins/components/bower/popper.js/dist/umd/popper.min.js"></script>
 	<script src="/skins/components/bootstrap/bootstrap.min.js"></script>
 	<script src="/vendor/schoolphp/library/Core/fw.min.js" defer></script>
-	<script src="/skins<?php echo Core::$SKIN;?>/js/scripts.js"></script>
 </head>
 <body>
 <?php
 if(isAdmin()) { /* Login */ ?>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">School-PHP ADMIN PANEL</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Пункты меню</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ядро <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Создание своих модулей</a></li>
-              <li><a href="#">Установка внешних модулей</a></li>
-            </ul>
-          </li>
-          <li><a href="/login/exit">Выход</a></li>
-        </ul>
-        <form class="navbar-form navbar-right">
-          <input type="text" class="form-control" placeholder="Search...">
-        </form>
-      </div>
-    </div>
-  </nav>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+                    <a href="/admin" title="На главную" data-toggle="tooltip" data-placement="bottom"><img alt="" src="/skins/img/admin/short-logo.png"></a>
+                </div>
+                <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6 text-primary text-right salut">
+                    <div>Здравствуйте, <?php echo htmlspecialchars(User::$data['login'])?>!</div>
+                    <a class="btn btn-success btn-adapt" href="<?php
+                    if($_GET['_module'] == 'goods')
+                        echo '/goods';
+                    elseif ($_GET['_module'] == 'books')
+                        echo '/books';
+                    elseif($_GET['_module'] == 'authors')
+                        echo '/books/authors';
+                    else
+                        echo '/';
+                    ?>" target="_blank">
+                        <i class="glyphicon glyphicon-eye-open"></i>
+                        <span class="large">Просмотр сайта</span>
+                        <span class="small">На сайт</span>
+                    </a>
+                    <a class="btn btn-danger btn-adapt" href="/" title="Выйти из админки" data-toggle="tooltip" data-placement="bottom">
+                        <i class="glyphicon glyphicon-log-in"></i>
+                        Exit
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="nav navbar-nav">
+                        <li class="<?php if ($_GET['_module'] == 'main') echo 'active';?>"">
+                        <a href="/admin">
+                            <i class="glyphicon glyphicon-home"></i>
+                            Главная
+                        </a>
+                        </li>
+                        <li class="<?php if ($_GET['_module'] == 'goods') echo 'active';?>">
+                            <a href="/admin/goods">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                Товары
+                            </a>
+                        </li>
+                        <li class="<?php if ($_GET['_module'] == 'users') echo 'active';?>">
+                            <a href="/admin/users">
+                                <i class="glyphicon glyphicon-user"></i>
+                                Пользователи
+                            </a>
+                        </li>
+                        <li class="<?php if ($_GET['_module'] == 'books') echo 'active';?>">
+                            <a href="/admin/books">
+                                <i class="glyphicon glyphicon-book"></i>
+                                Книги
+                            </a>
+                        </li>
+                        <li class="<?php if ($_GET['_module'] == 'authors') echo 'active';?>">
+                            <a href="/admin/authors">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                                Авторы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="upward" class = "animate"></div>
 <?php } ?>
 <?php echo $content; ?>
-<footer>
-  Разработано на Fox and Wolf Framework &copy; <?=Core::$CREATED;?> | <a href="mailto:inpost@list.ru"><i class="fa fa-envelope-o" aria-hidden="true"></i> inpost@list.ru</a>
-</footer>
-<?php echo \Core::$END; ?>
+    <footer class="text-center">
+        Copyrights <?php echo date('Y');?>. Admin for ItIdeas. All Rights Reserved.
+    </footer>
+    <script src="/skins<?php echo Core::$SKIN;?>/js/admin/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        })
+    </script>
+    <?php echo \Core::$END; ?>
 </body>
 </html>

@@ -9,3 +9,9 @@ if(isset($_POST['login'],$_POST['pass'])) {
 		$_SESSION['wrong-form']['key'] = (isset($_SESSION['wrong-form']['key']) ? ($_SESSION['wrong-form']['key']+1) : 1);
 	}
 }
+
+CORE::$META['title']  = 'Todo - admin';
+CORE::$END = '
+    <link href="/skins/css/admin/main.css" rel="stylesheet" type="text/css">
+    <script defer src="/skins/js/admin/main.js"></script>
+';

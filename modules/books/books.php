@@ -1,5 +1,5 @@
 <?php
-
+CORE::$META['title']  = 'Todo - books';
 CORE::$END = '<link href="/skins/css/default/books1.00.css" rel="stylesheet" type="text/css">';
 
 if (isset($_GET['pagenumber'])) {

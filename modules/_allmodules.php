@@ -26,7 +26,8 @@ class User extends \FW\User\User {
 	static $avatar = '';
     static $age = '';
     static $email = '';
-	static $datas = ['id','role','login','avatar', 'age', 'email'];
+    static $lastactive;
+	static $datas = ['id','role','login','avatar', 'age', 'email', 'lastactive'];
 }
 
 User::start(isset($_SESSION['user']['id']) ? ['id' => (int)$_SESSION['user']['id']] : []);
