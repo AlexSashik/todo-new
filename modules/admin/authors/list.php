@@ -81,14 +81,14 @@ if (isset($_POST['name'], $_POST['yod'], $_POST['yob'])) {
     // Поиск по году рождения
     if (is_numeric($_POST['yob'])) {
         $where[] = "`yob` >= '".(int)$_POST['yob']."'";
-    } else {
+    } elseif (!(empty($_POST['yob']))) {
         $j = 1; // Идентификатор неудачного поиска, используемый в виде
     }
 
     // Поиск по году смерти
     if (is_numeric($_POST['yod'])) {
         $where[] = "`yod` <= '".(int)$_POST['yod']."'";
-    } else {
+    } elseif (!(empty($_POST['yod']))) {
         $j = 1; // Идентификатор неудачного поиска, используемый в виде
     }
 

@@ -1,7 +1,7 @@
 <div class="main container">
     <div class="container-fluid add_edit-header text-center">
         <span class="text-primary">
-            Редактирование товара <?if(isset($err)) echo '<span class="text-danger">(имеются ошибки!)</span>';?>
+            Редактирование товара <?php if(isset($err)) echo '<span class="text-danger">(имеются ошибки!)</span>';?>
         </span>
     </div>
 
