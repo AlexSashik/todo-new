@@ -2958,4 +2958,191 @@ at file D:\OSPanel\domains\todo-new\modules\admin\goods\edit.php in line 130
 at file D:\OSPanel\domains\todo-new\modules\admin\goods\edit.php in line 131
 =================================================
 
+2017-12-31 15:55:54: Notice: [Undefined index: active]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 96
+=================================================
+
+2017-12-31 15:55:54: Notice: [Undefined index: reg_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 105
+=================================================
+
+2017-12-31 15:55:54: Notice: [Undefined index: last_active_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 106
+=================================================
+
+2017-12-31 15:55:54: Notice: [Undefined index: active]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 96
+=================================================
+
+2017-12-31 15:55:54: Notice: [Undefined index: reg_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 105
+=================================================
+
+2017-12-31 15:55:54: Notice: [Undefined index: last_active_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 106
+=================================================
+
+2017-12-31 15:57:41: Notice: [Undefined variable: row]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\list.php in line 121
+=================================================
+
+2017-12-31 15:58:58: Notice: [Undefined index: reg_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 105
+=================================================
+
+2017-12-31 15:58:58: Notice: [Undefined index: last_active_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 106
+=================================================
+
+2017-12-31 15:58:58: Notice: [Undefined index: reg_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 105
+=================================================
+
+2017-12-31 15:58:58: Notice: [Undefined index: last_active_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\list.tpl in line 106
+=================================================
+
+2017-12-31 16:55:20: Notice: [Undefined index: date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\list.php in line 74
+=================================================
+
+2017-12-31 16:55:20: Notice: [Undefined index: lastactive]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\list.php in line 75
+=================================================
+
+2017-12-31 16:57:58: Notice: [Undefined variable: search]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\list.php in line 82
+=================================================
+
+2017-12-31 17:10:03: Notice: [Undefined index: reg_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\edit.tpl in line 57
+=================================================
+
+2017-12-31 17:10:03: Notice: [Undefined index: last_active_date]
+at file D:\OSPanel\domains\todo-new\modules\admin\users\view\edit.tpl in line 65
+=================================================
+
+2017-12-31 17:39:34: User Notice: [Ошибка регистрации: PHPMailer\PHPMailer\Exception Object
+(
+    [message:protected] => Invalid address:  (punyEncode) root@localhost
+    [string:Exception:private] => 
+    [code:protected] => 0
+    [file:protected] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+    [line:protected] => 1327
+    [trace:Exception:private] => Array
+        (
+            [0] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\phpmailer\phpmailer\src\PHPMailer.php
+                    [line] => 1253
+                    [function] => preSend
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 84
+                    [function] => send
+                    [class] => PHPMailer\PHPMailer\PHPMailer
+                    [type] => ->
+                    [args] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php
+                    [line] => 22
+                    [function] => sendActivate
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => 3
+                            [1] => fcfa91d132c9102d917120a664b3440b
+                            [2] => test@gmail.com
+                            [3] => test
+                            [4] => 123
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                    [line] => 51
+                    [function] => regist
+                    [class] => FW\User\Registration
+                    [type] => ->
+                    [args] => Array
+                        (
+                            [0] => test
+                            [1] => 123
+                            [2] => test@gmail.com
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 223
+                    [args] => Array
+                        (
+                            [0] => D:\OSPanel\domains\todo-new\modules\cab\reg.php
+                        )
+
+                    [function] => require
+                )
+
+            [5] => Array
+                (
+                    [file] => D:\OSPanel\domains\todo-new\index.php
+                    [line] => 247
+                    [function] => init
+                    [class] => FrontController
+                    [type] => ::
+                    [args] => Array
+                        (
+                            [0] => cab/reg
+                        )
+
+                )
+
+        )
+
+    [previous:Exception:private] => 
+)
+]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\User\Registration.php in line 87
+=================================================
+
+2017-12-31 18:11:33: Warning: [unlink(./uploads/tmp20171231-181133img6744.jpg): No such file or directory]
+at file D:\OSPanel\domains\todo-new\modules\admin\books\edit.php in line 106
+=================================================
+
+2017-12-31 18:20:33: Warning: [key() expects parameter 1 to be array, integer given]
+at file D:\OSPanel\domains\todo-new\index.php in line 147
+=================================================
+
+2017-12-31 18:20:33: Warning: [require(./modules/admin/authors/main.php): failed to open stream: No such file or directory]
+at file D:\OSPanel\domains\todo-new\index.php in line 223
+=================================================
+
+2017-12-31 18:20:33: Complite error: [require(): Failed opening required './modules/admin/authors/main.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
+at file D:\OSPanel\domains\todo-new\index.php in line 223
+=================================================
+
+2017-12-31 18:26:59: Notice: [Undefined variable: j]
+at file D:\OSPanel\domains\todo-new\modules\admin\authors\view\list.tpl in line 50
+=================================================
+
 
