@@ -74,8 +74,8 @@
             <form method="post" class="form_profile" enctype="multipart/form-data">
                 <div class="left_side">
                     <img src="/skins/img/default/users/100x100/<?php
-                                    if (empty(User::$data['avatar'])) echo 'noavatar.png';
-                                    else echo htmlspecialchars(User::$data['avatar']);?>" alt ="">
+                                    if (empty(User::$avatar)) echo 'noavatar.png';
+                                    else echo htmlspecialchars(User::$avatar);?>" alt ="">
                     <div class="file_div">
                         <label for="file" class="file_label">
                             <i class="fa fa-upload" aria-hidden="true"></i>
@@ -96,19 +96,19 @@
                     <label class="label_for_info" for="login">Логин:</label>
                     <input id="login" class="lep <?php if (isset($err['login'])) echo 'bg_err';?>" type="text" name="login" value="<?php
                         if (isset($_POST['login'])) echo hc($_POST['login']);
-                        else echo hc(User::$data['login']);
+                        else echo hc(User::$login);
                         ?>">
                     <div class="clear"></div>
                     <label class="label_for_info" for="email">Email:</label>
                     <input id="email" class="lep <?php if (isset($err['email'])) echo 'bg_err';?>" type="email" name="email" value="<?php
                     if (isset($_POST['email'])) echo hc($_POST['email']);
-                    else echo hc(User::$data['email']);
+                    else echo hc(User::$email);
                     ?>">
                     <div class="clear"></div>
                     <label class="label_for_info" for="age">Возраст:</label>
                     <input id="age" <?php if (isset($err['age'])) echo 'class="bg_err"';?> type="text" name="age" value="<?php
                     if (isset($_POST['age'])) echo hc($_POST['age']);
-                    else if (User::$data['age']) echo hc(User::$data['age']);?>">
+                    else if (User::$age) echo hc(User::$age);?>">
                     <div class="clear"></div>
                     <p>Изменить пароль</p>
                     <?php
@@ -126,7 +126,7 @@
                 </div>
                 <div class="right_side">
                     <p>Статус на сайте</p>
-                    <img src="/skins/img/default/users/<?php if (User::$data['role'] == 'admin') echo 'admin'; else echo 'user';?>_role.jpg" alt="">
+                    <img src="/skins/img/default/users/<?php if (User::$role == 'admin') echo 'admin'; else echo 'user';?>_role.jpg" alt="">
                 </div>
                 <div class="clear"></div>
                 <div class="reg_footer">

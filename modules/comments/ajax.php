@@ -52,18 +52,18 @@ if (!isset(User::$data)) {
 } else {
     // добавление комментария
     if (isset($_POST['text']))  {
-        if (User::$data['role'] == 'ban') {
+        if (User::$role == 'ban') {
             $response['err']['access'] = 'Вы забанены администратором сайта и не можете оставлять комментарии.';
             echo json_encode($response);
             exit;
         }
 
         $_POST = trimAll ($_POST,1);
-        $img_name = (empty(User::$data['avatar'])) ? 'noavatar.png' : User::$data['avatar'];
-        $status   = ( User::$data['role'] == 'admin' ) ? 'администратор' : 'пользователь';
+        $img_name = (empty(User::$avatar)) ? 'noavatar.png' : User::$avatar;
+        $status   = ( User::$role == 'admin' ) ? 'администратор' : 'пользователь';
         $response = array(
-            'login' => htmlspecialchars(User::$data['login']),
-            'email' => htmlspecialchars(User::$data['email']),
+            'login' => htmlspecialchars(User::$login),
+            'email' => htmlspecialchars(User::$email),
             'text'  => htmlspecialchars($_POST['text']),
             'time'  => date("Y-m-d H:i:s"),
             'status' => $status,
@@ -86,13 +86,13 @@ if (!isset(User::$data)) {
             }
             $res = q("
 				INSERT INTO `comments` SET
-				`user_id`  = '".(int)User::$data['id']."',
-				`login`    = '".es(User::$data['login'])."',
-				`email`    = '".es(User::$data['email'])."',
-				`avatar`   = '".es(User::$data['avatar'])."',
+				`user_id`  = '".(int)User::$id."',
+				`login`    = '".es(User::$login)."',
+				`email`    = '".es(User::$email)."',
+				`avatar`   = '".es(User::$avatar)."',
 				`text`     = '".es($_POST['text'])."',
 				`date`     = NOW(),
-				`status`   = ".status2int(User::$data['role'])."
+				`status`   = ".status2int(User::$role)."
 			");
             $response['id'] = DB::_()->insert_id;
         }
@@ -103,7 +103,7 @@ if (!isset(User::$data)) {
     }
 
     //редактирование комментария
-    if (User::$data['role'] == 'admin' && isset($_POST['edit_id'], $_POST['edit_text'])) {
+    if (User::$role == 'admin' && isset($_POST['edit_id'], $_POST['edit_text'])) {
         $res = q("
             SELECT * FROM `comments`
             WHERE `id` = ".(int)$_POST['edit_id']."

@@ -83,7 +83,7 @@ if (!isset($_SESSION['user'])) {
         //Проверка логина
         if (empty($_POST['login']) || mb_strlen($_POST['login'], 'utf-8') > 30) {
             $err['login'] = true;
-        }  elseif (!checkUnique('fw_users', 'login', $_POST['login']) && $_POST['login'] != User::$data['login']) {
+        }  elseif (!checkUnique('fw_users', 'login', $_POST['login']) && $_POST['login'] != User::$login) {
             $err['login'] = true;
             $err['gen_info'] = 'Логин занят';
         }
@@ -91,7 +91,7 @@ if (!isset($_SESSION['user'])) {
         //Проверка email
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) || mb_strlen($_POST['email'],'utf-8') > 50) {
             $err['email'] = true;
-        } elseif (!checkUnique('fw_users', 'email', $_POST['email']) && $_POST['email'] != User::$data['email']) {
+        } elseif (!checkUnique('fw_users', 'email', $_POST['email']) && $_POST['email'] != User::$email) {
             $err['email'] = true;
             if (isset($err['gen_info'])) {
                 $err['gen_info'] = 'Логин и email занят';
@@ -145,17 +145,17 @@ if (!isset($_SESSION['user'])) {
 					UPDATE `comments` SET
 					`login`   = '".es($_POST['login'])."',
 					`avatar` = '".es($photo_name)."'
-					WHERE `user_id` = '".(int)User::$data['id']."'
+					WHERE `user_id` = '".(int)User::$id."'
 				");
-                if (!empty(User::$data['avatar'])) {
-                    if (file_exists('./skins/img/default/users/100x100/'.User::$data['avatar'])) unlink('./skins/img/default/users/100x100/'.User::$data['avatar']);
+                if (!empty(User::$avatar)) {
+                    if (file_exists('./skins/img/default/users/100x100/'.User::$avatar)) unlink('./skins/img/default/users/100x100/'.User::$avatar);
                 }
                 $ava_string = "`avatar` = '".es($photo_name)."',";
             } else {
                 q ("
 					UPDATE `comments` SET
 					`login`   = '".es($_POST['login'])."'
-					WHERE `user_id` = '".(int)User::$data['id']."'
+					WHERE `user_id` = '".(int)User::$id."'
 				");
                 $ava_string = "";
             }
@@ -167,7 +167,7 @@ if (!isset($_SESSION['user'])) {
 				".$ava_string."
 				`login`   	  = '".es($_POST['login'])."',
 				`email` 	  = '".es($_POST['email'])."'
-				WHERE `id`    = ".(int)User::$data['id']."
+				WHERE `id`    = ".(int)User::$id."
 			");
             $_SESSION['info'] = array('Редактирование профиля', 'Профиль успешно отредактирован!', 'success');
             header ("Location: /cab");

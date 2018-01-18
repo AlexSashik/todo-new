@@ -5,7 +5,7 @@
             <aside>
                 <?php
                 if (isset(User::$data)) {
-                    echo '<p>Здравствуйте, <span>'.htmlspecialchars(User::$data['login']).'!</span></p>';
+                    echo '<p>Здравствуйте, <span>'.htmlspecialchars(User::$login).'!</span></p>';
                     if (User::$data['role'] === 'admin') {
                         echo '<a href="/admin" class="animate">Admin</a> ';
                     }

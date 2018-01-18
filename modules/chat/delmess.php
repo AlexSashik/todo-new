@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['id'], User::$data) && User::$data['role'] == 'admin') {
+if (isset($_POST['id'], User::$data) && User::$role == 'admin') {
     q("
         UPDATE `chat` SET
         `del` = 1

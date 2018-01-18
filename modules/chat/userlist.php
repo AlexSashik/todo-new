@@ -3,7 +3,7 @@
 // вывод списка пользователей + их модерация
 if (isset($_POST['query'], $_POST['id']) && $_POST['query'] == 'usersList') {
     $response = array();
-    if (isset(User::$data) && User::$data['role'] == 'admin') {
+    if (isset(User::$data) && User::$role == 'admin') {
         $response['status'] = 'admin';
         if ((int)$_POST['id'] >= 0) {
             $res = q("

@@ -4,11 +4,11 @@
 if (isset($_POST['text'], $_POST['lastId'])) {
     $_POST = trimAll($_POST,1);
     $response = array();
-    if (!isset(User::$data) || User::$data['access'] = 0) {
+    if (!isset(User::$data)) {
         $response['err'] = 'NO';
         echo json_encode($response);
         exit;
-    } elseif (User::$data['role'] == 'ban') {
+    } elseif (User::$role == 'ban') {
         $response['err'] = 'BAN';
         echo json_encode($response);
         exit;
@@ -17,7 +17,7 @@ if (isset($_POST['text'], $_POST['lastId'])) {
     if (!empty($_POST['text'])) {
         q("
             INSERT INTO `chat` SET
-            `login` = '".es(User::$data['login'])."',
+            `login` = '".es(User::$login)."',
             `text`  = '".es($_POST['text'])."',
             `date`  = NOW()
         ");
@@ -26,14 +26,14 @@ if (isset($_POST['text'], $_POST['lastId'])) {
             WHERE `id` > ".(int)$_POST['lastId']."
         ");
         while($row = $res->fetch_assoc()) {
-            if (isset(User::$data) && preg_match('#^'.User::$data['login'].',\s#u', $row['text'], $matches)) {
+            if (isset(User::$data) && preg_match('#^'.User::$login.',\s#u', $row['text'], $matches)) {
                 $response['forme'] = true;
             }
             $response['id'][] = $row['id'];
             $response['login'][] = htmlspecialchars($row['login']);
             $response['text'][] = htmlspecialchars($row['text']);
         }
-        if (isset(User::$data) && User::$data['role'] == 'admin') {
+        if (isset(User::$data) && User::$role == 'admin') {
             $response['status'] = 'admin';
         }
     }

@@ -1,7 +1,7 @@
 <script>
     var status = <?php
         if (isset(User::$data)) {
-            if (User::$data['role'] == 'admin') {
+            if (User::$role == 'admin') {
                 echo 5;
             } else {
                 echo 1;
@@ -37,12 +37,12 @@
         <div class="photo">
             <?php
             if (isset(User::$data)) {
-                if (!empty(User::$data['avatar'])) {
+                if (!empty(User::$avatar)) {
                     echo '<img alt="" src="/skins/img/default/users/100x100/'.htmlspecialchars(User::$data['avatar']).'">';
                 } else {
                     echo '<img alt="" src="/skins/img/default/users/100x100/noavatar.png">';
                 }
-                echo '<br>'.htmlspecialchars(User::$data['login']);
+                echo '<br>'.htmlspecialchars(User::$login);
             } else {
                 echo '<img alt="" src="/skins/img/default/users/100x100/noavatar.png">';
             }
@@ -97,7 +97,7 @@
                 </span>
                 </div>
                 <?php
-                if (isset(User::$data) && User::$data['role'] == 'admin') {
+                if (isset(User::$data) && User::$role == 'admin') {
                     echo '<span id="text'.(int)$row['id'].'" contenteditable>'.nl2br(htmlspecialchars($row['text'])).'</span>';
                 } else {
                     echo nl2br(htmlspecialchars($row['text']));
@@ -107,7 +107,7 @@
                 <span class="time">Опубликовано <?php echo htmlspecialchars($row['date']);?></span>
             </div>
             <?php
-            if (isset(User::$data) && User::$data['role'] == 'admin' ) {
+            if (isset(User::$data) && User::$role == 'admin' ) {
                 echo '<a onclick="return confirm (\'Вы точно хотите удалить данный комментарий?\')"  title="Удалить комментарий" href="/comments?action=delete&id='.(int)$row['id'].'" class="delete"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></a>';
                 echo '<span onclick="return edit(this)" title="Редактировать комментарий" data-id="'.(int)$row['id'].'" class="edit"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></span>';
             }

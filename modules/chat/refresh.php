@@ -8,7 +8,7 @@ if (isset($_POST['query'], $_POST['lastId'])) {
         WHERE `id` > ".(int)$_POST['lastId']." AND `del` = 0
     ");
     while($row = $res->fetch_assoc()) {
-        if (isset(User::$data) && preg_match('#^'.User::$data['login'].',\s#u', $row['text'], $matches)) {
+        if (isset(User::$data) && preg_match('#^'.User::$login.',\s#u', $row['text'], $matches)) {
             $response['forme'] = true;
         }
         $response['id'][] = $row['id'];
@@ -31,7 +31,7 @@ if (isset($_POST['query'], $_POST['lastId'])) {
         $response['delid'][] = $row['id'];
         $_SESSION['del_mess'][] = $row['id'];
     }
-    if (isset(User::$data) && User::$data['role'] == 'admin') {
+    if (isset(User::$data) && User::$role == 'admin') {
         $response['status'] = 'admin';
     }
     echo json_encode($response);
