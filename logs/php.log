@@ -34,4 +34,16 @@ at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 76
 at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 34
 =================================================
 
+2018-01-22 21:58:55: Notice: [Undefined index: login]
+at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 65
+=================================================
+
+2018-01-22 21:58:55: Notice: [Undefined index: password]
+at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 65
+=================================================
+
+2018-01-22 21:58:55: Warning: [Creating default object from empty value]
+at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 79
+=================================================
+
 

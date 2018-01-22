@@ -1,6 +1,6 @@
 <?php
 CORE::$END = '
-    <link href="/skins/css/default/cab1.00.css" rel="stylesheet" type="text/css">
+    <link href="/skins/css/default/cab1.01.css" rel="stylesheet" type="text/css">
     <script defer src="/skins/js/cab1.00.js"></script>
 ';
 if (!isset($_SESSION['user'])) {
