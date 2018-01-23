@@ -46,4 +46,24 @@ at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 65
 at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 79
 =================================================
 
+2018-01-23 21:41:47: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=AQCelIVDc_TIfYKEJ1szsnuHA_ii7tQbkraib_t4OTZpkCP5TMIxu8xn2P7dgmGL8sng9oMHqokHk3woGnkMvorjrG_yFfV2X9xcxRokAJlcAwsX9A6f4mNyJFYM07NmB7ddewI_Rw9T8ruC9o8maTCDpRhkzPuqtUAIO6A0DuafTBrCocy9a844mLnwpjtP1M4B_yhgTid-laipjaRGfhAcusMBxhAI-MUDh-fevDNtRWi1r3ru-gfPEYnoP34eZ1ZTCoC7RUtG3NnAiefFYOglZvI_f1WPRCZvCrYr20151lxoR8tT9XF7vYLPq-bgbOVKc7EfTrYa6uK2dCh-NUbY): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 26
+=================================================
+
+2018-01-23 21:46:30: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=AQCelIVDc_TIfYKEJ1szsnuHA_ii7tQbkraib_t4OTZpkCP5TMIxu8xn2P7dgmGL8sng9oMHqokHk3woGnkMvorjrG_yFfV2X9xcxRokAJlcAwsX9A6f4mNyJFYM07NmB7ddewI_Rw9T8ruC9o8maTCDpRhkzPuqtUAIO6A0DuafTBrCocy9a844mLnwpjtP1M4B_yhgTid-laipjaRGfhAcusMBxhAI-MUDh-fevDNtRWi1r3ru-gfPEYnoP34eZ1ZTCoC7RUtG3NnAiefFYOglZvI_f1WPRCZvCrYr20151lxoR8tT9XF7vYLPq-bgbOVKc7EfTrYa6uK2dCh-NUbY#_=_): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
+=================================================
+
+2018-01-23 21:49:03: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=AQDcwoDR7qd9SdtA2RMU85l7LoIJxywknks3_KTl3xGKmoTMWkTkxrU7-3AXjnvVXW_0Ty4nRXeye-HtchUun00VVa52dd4x2RojH8dhnFkLceF3-3ZtvilyBLd6cLlYxnRdvzLMHwd0cGD3AYNEeDk2C0LW_s-q8W3XqD1FJK7dRHSufjJr7Fz7OXKN7hAuTwnNBE42damdn99MjHS7veBb51dwIRF2jglDa0gfTfnMeHCsceRaqRh9YVz015RLJ19RIePtEOJCqa7J8l1NoMRIopGQfcqATvGi8F6VjTWIxmRQAe3kN0joMiaA42MGLw-7S0-A2oeahT_EG5aqN_2d#_=_): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
+=================================================
+
+2018-01-23 21:50:16: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=code=AQBvhynitog--BIowVmLt_W2XjL9DN4IcakAyi73NoTGdUh9-xnAPkUnTPs51SgU9ofmtIvzXp5h40JLss2Pw_J9W7OZ7Chf4wjaXLpTIajh22A4b1doVf4MCTMk6xS_XyBbN2E-Zke_cNskPciU3N3xZtJ7znQjIYtBa9ccIUCijmAEdwL7O5sfwW8E5q5Eb0-AR13_IRQoPS9HQwTQUNcEfxz3q-0uPtrp_XiNrv3n65RawnE98Q3E-Us4DDVykwi73KxB98Eii6P32et8k7vsKRL7peE1gfHqwXP2Kaulr9isNPyJMYlgK37KHiJMJhwloWjdD7V_ksTU29NMByKo#_=_): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+]
+at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
+=================================================
+
 

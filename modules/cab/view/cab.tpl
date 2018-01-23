@@ -34,7 +34,7 @@
             <div class="reg_footer">
                 <input class="submit" type="submit" name="reg" value="Авторизоваться">
                 <p>или войти через</p>
-                <a title="Войти через facebook" href="https://www.facebook.com/v2.11/dialog/oauth?client_id=1645997168798553&redirect_uri=http://todo.kh.ua/">
+                <a title="Войти через facebook" href="https://www.facebook.com/v2.11/dialog/oauth?client_id=<?php echo Core::$ID?>&redirect_uri=<?php echo Core::$URL?>&response_type=code&scope=public_profile,email">
                     <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
                 </a>
             </div>
