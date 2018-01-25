@@ -3,7 +3,10 @@
     <form method="post" class="form_enter" onsubmit="return checkRegForm();">
         <div class="reg_header">
             <label for="login">Логин*</label>
-            <input required id="login" class="lep" type="text" name="login" <?php if (isset($_POST['login'])) echo 'value="'.htmlspecialchars($_POST['login']).'"';?>>
+            <input required id="login" class="lep" type="text" name="login" <?php
+            if (isset($_POST['login'])) echo 'value="'.htmlspecialchars($_POST['login']).'"';
+            elseif (isset($facebook) && !empty($facebook['login'])) echo 'value="'.htmlspecialchars($facebook['login']).'"';
+            ?>>
             <?php
             if (isset($errors['login_err'])) {
                 echo '<div id="log_err" class="info_err"><i class="fa fa-times" aria-hidden="true"></i>'.$errors['login_err'].'</div>';
@@ -12,7 +15,10 @@
             <div class="clear"></div>
 
             <label for="email">Email*</label>
-            <input required id="email" class="lep" type="email" name="email" <?php if (isset($_POST['email'])) echo 'value="'.htmlspecialchars($_POST['email']).'"';?>>
+            <input required id="email" class="lep" type="email" name="email" <?php
+            if (isset($_POST['email'])) echo 'value="'.htmlspecialchars($_POST['email']).'"';
+            elseif (isset($facebook) && !empty($facebook['email'])) echo 'value="'.htmlspecialchars($facebook['email']).'"';
+            ?>>
             <?php
             if (isset($errors['email_err'])) {
                 echo '<div id="email_err" class="info_err"><i class="fa fa-times" aria-hidden="true"></i>'.$errors['email_err'].'</div>';
@@ -28,6 +34,14 @@
             }
             ?>
             <div class="clear"></div>
+
+            <?php
+            if (isset($facebook)) {
+                echo '<input type="hidden" name="facebook" value="'.(int)$facebook['id'].'">';
+            } elseif (isset($_POST['facebook'])) {
+                echo '<input type="hidden" name="facebook" value="'.(int)$_POST['facebook'].'">';
+            }
+            ?>
 
         </div>
         <div class="reg_footer">

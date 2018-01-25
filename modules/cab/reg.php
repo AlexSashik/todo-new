@@ -15,6 +15,11 @@ if (isset($_SESSION['info'])) {
     unset($_SESSION['info']);
 }
 
+if (isset($_SESSION['facebook'])) {
+    $facebook = $_SESSION['facebook'];
+    unset($_SESSION['facebook']);
+}
+
 if ( isset($_POST['login'], $_POST['email'], $_POST['pass']) ) {
     $_POST = trimAll($_POST,1);
 
@@ -45,10 +50,20 @@ if ( isset($_POST['login'], $_POST['email'], $_POST['pass']) ) {
         $errors['pass_err'] = 'Cлишком длинный пароль';
     }
 
+    // проверка id facebook на уникальность
+    if (isset($_POST['facebook'])) {
+        if (!checkUnique('fw_users', 'facebook_id', $_POST['facebook'])) {
+            header ("Location: /cab/reg");
+            exit;
+        }
+        $facebook_id = $_POST['facebook'];
+    } else {
+        $facebook_id = -1;
+    }
 
     if (!isset($errors)) {
         $reg = new \FW\User\Registration;
-        if($reg->regist($_POST['login'],$_POST['pass'],$_POST['email'])) {
+        if($reg->regist($_POST['login'],$_POST['pass'],$_POST['email'], $facebook_id)) {
             $_SESSION['info'] = 'Для завершения процедуры регистрации проверьте Вашу почту.';
             header ("Location: /cab/reg");
             exit;

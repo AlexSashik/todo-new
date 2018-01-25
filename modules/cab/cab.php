@@ -13,6 +13,58 @@ if (!isset($_SESSION['user'])) {
         unset ($_SESSION['activation']);
     }
 
+    // Авторизация через Facebook
+    if (isset($_GET['code'])) {
+        $token = json_decode(file_get_contents('https://graph.facebook.com/v2.11/oauth/access_token?client_id='.Core::$ID.'&redirect_uri='.Core::$URL.'&client_secret='.Core::$SECRET.'&code='.$_GET['code']) , true);
+        if (empty($token)) {
+            header ("Location: /cab");
+            exit;
+        }
+        $data  = json_decode(file_get_contents('https://graph.facebook.com/v2.11/me?client_id='.Core::$ID.'&redirect_uri='.Core::$URL.'&client_secret='.Core::$SECRET.'&code='.$_GET['code'].'&access_token='.$token['access_token'].'&fields=id,name,email') , true);
+        if (empty($data)) {
+            header ("Location: /cab");
+            exit;
+        }
+        $res = q ("
+			SELECT `facebook_id`
+			FROM `fw_users`
+			WHERE `facebook_id` = ".es($data['id'])."
+		");
+        if ($res->num_rows) {
+            $row = $res->fetch_assoc();
+            $auth = new \FW\User\Authorization;
+            $remember = (isset($_POST['remember']) ? true : false);
+            if($auth->authByField($row, $remember)) {
+                $_SESSION['info']['success_autoriz'] = true;
+                header("Location: /");
+                exit;
+            } else {
+                if (isset($auth->errors[0]) &&  $auth->errors[0] == 'wrong-access-confirm') {
+                    $errors['active_err']['header'] = 'Активация аккаунта';
+                    $errors['active_err']['img']    = '/skins/img/admin/goods/attantion.png';
+                    $errors['active_err']['text']   = '
+					Ваш аккаунт не активирован. Для его активации перейдите по 
+					ссылке, указанной в письме, отправленном на email, который Вы указали при регистрации';
+                } else {
+                    $errors['active_err']['header'] = 'Ошибка авторизации';
+                    $errors['active_err']['img']    = '/skins/img/admin/goods/attantion.png';
+                    $errors['active_err']['text']   = '
+					Ой, что-то пошло не так. Попробуйте авторизоваться с помощью логина и пароля.';
+                }
+            }
+        } else {
+            $_SESSION['facebook'] = [
+                'id' 	=> $data['id'],
+                'login' => $data['name'],
+                'email' => $data['email']
+            ];
+            $_SESSION['info'] = 'Вы вошли на сайт через аккаунт Facebook, остался всего один шаг. Создайте новую учетную запись, привязанную к Facebook ID, заполнив поля регистрации.';
+            header ("Location: /cab/reg");
+            exit;
+        };
+    }
+
+    // Активация пользователя
     if (isset($_GET['hash'], $_GET['id']) ) {
         $regist = new \FW\User\Registration;
         if(!$regist->activate($_GET['id'],$_GET['hash'])) {
