@@ -8,4 +8,5 @@ return [
     ],
     'reg' => [],
     'exit' => [],
+    'delapi' => [],
 ];

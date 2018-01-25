@@ -328,7 +328,6 @@ setTimeout(function refresh() {
                     for (var j = 0; j < resp.delid.length; j++) {
                         $('[data-idBlock = ' + resp.delid[j] + ']').remove();
                     }
-                    //console.log(resp.delid);
                 }
             },
             error: function () {

@@ -74,7 +74,7 @@
         ?>
 
         <div class="profile">
-            <h2>МОЙ ПРОФИЛЬ</h2>
+            <h2>МОЙ ПРОФИЛЬ <img src="/skins/img/default/users/<?php if (User::$role == 'admin') echo 'admin'; else echo 'user';?>_role.png" alt=""></h2>
             <form method="post" class="form_profile" enctype="multipart/form-data">
                 <div class="left_side">
                     <img src="/skins/img/default/users/100x100/<?php
@@ -129,8 +129,20 @@
                     <div class="clear"></div>
                 </div>
                 <div class="right_side">
-                    <p>Статус на сайте</p>
-                    <img src="/skins/img/default/users/<?php if (User::$role == 'admin') echo 'admin'; else echo 'user';?>_role.jpg" alt="">
+                    <p>Связь с FaceBook аккаунтом</p>
+                    <?php
+                    if (User::$facebook_id == -1) {
+                        ?>
+                        <div>Отсутствует</div>
+                        <a href="#" class="add-api">Добавить</a>
+                        <?php
+                    } else {
+                        ?>
+                        <div><img src="/skins/img/default/comments/galochka.png" alt=""></div>
+                        <a href="#" class="del-api" onclick="return delApi();">Удалить</a>
+                        <?php
+                    }
+                    ?>
                 </div>
                 <div class="clear"></div>
                 <div class="reg_footer">

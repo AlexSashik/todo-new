@@ -66,4 +66,8 @@ at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
 at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
 =================================================
 
+2018-01-25 23:16:02: Notice: [Trying to get property of non-object]
+at file D:\OSPanel\domains\todo-new\modules\cab\delapi.php in line 8
+=================================================
+
 

@@ -113,3 +113,39 @@ function checkRegForm () {
 
     return flag;
 }
+
+
+function delApi() {
+    if (confirm ('Вы точно хотите открепить ранее прикреплённый социальный аккаунт в FaceBook?')) {
+        $.ajax({
+            url: '/cab/delapi?ajax',
+            type: "POST",
+            cache: false,
+            data: {
+                'action': 'delapi'
+            },
+            timeout: 15000,
+            success: function(resp) {
+               if (resp) {
+                   $('.right_side>a').remove();
+                   $('.right_side>div').remove();
+                   $(".right_side").append(
+                       '<div>Отсутствует</div>' +
+                       '<a href="#" class="add-api">Добавить</a>'
+                   );
+               } else {
+                   alert ('Ой, что-то пошло не так и соцсеть не откреплена. Свяжитесь с нашей техподдержкой для решения вопроса.');
+               }
+            },
+            error: function (x, t) {
+                send = false;
+                if (t === "timeout") {
+                    alert('Ожидание ответа с сервера слишком велико');
+                } else {
+                    alert('При отправке запроса возникли какие-то проблемы');
+                }
+            }
+        });
+    }
+    return false;
+}
