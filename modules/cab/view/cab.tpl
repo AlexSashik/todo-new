@@ -134,7 +134,7 @@
                     if (User::$facebook_id == -1) {
                         ?>
                         <div>Отсутствует</div>
-                        <a href="#" class="add-api">Добавить</a>
+                        <a href="https://www.facebook.com/v2.11/dialog/oauth?client_id=<?php echo Core::$ID?>&redirect_uri=<?php echo Core::$URL?>&response_type=code" class="add-api">Добавить</a>
                         <?php
                     } else {
                         ?>

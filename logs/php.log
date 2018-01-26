@@ -70,4 +70,32 @@ at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
 at file D:\OSPanel\domains\todo-new\modules\cab\delapi.php in line 8
 =================================================
 
+2018-01-26 22:35:44: Notice: [Undefined index: page2]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
+=================================================
+
+2018-01-26 22:35:44: Warning: [require(./modules/api/user/.php): failed to open stream: No such file or directory]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
+=================================================
+
+2018-01-26 22:35:44: Complite error: [require(): Failed opening required './modules/api/user/.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
+=================================================
+
+2018-01-26 22:35:50: Warning: [require(./modules/api/user/users.php): failed to open stream: No such file or directory]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
+=================================================
+
+2018-01-26 22:35:50: Complite error: [require(): Failed opening required './modules/api/user/users.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
+=================================================
+
+2018-01-26 22:51:58: Warning: [require(./modules/api/user/secrete.php): failed to open stream: No such file or directory]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 6
+=================================================
+
+2018-01-26 22:51:58: Complite error: [require(): Failed opening required './modules/api/user/secrete.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
+at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 6
+=================================================
+
 

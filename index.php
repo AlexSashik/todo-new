@@ -245,7 +245,7 @@ class FrontController {
 }
 
 $content = FrontController::init($_GET['route'] ?? '');
-if(isset($_GET['ajax'])) {
+if(isset($_GET['ajax']) || $_GET['_module'] == 'api') {
 	echo $content;
 	exit;
 }
