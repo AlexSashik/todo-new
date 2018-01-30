@@ -1,101 +1,13 @@
-2018-01-06 21:53:25: Notice: [Array to string conversion]
-at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 4
+2018-01-28 23:21:33: Notice: [Array to string conversion]
+at file D:\OSPanel\domains\todo-new\modules\api\user\secret.php in line 15
 =================================================
 
-2018-01-08 21:36:31: Warning: [key() expects parameter 1 to be array, integer given]
-at file D:\OSPanel\domains\todo-new\index.php in line 147
+2018-01-30 22:40:55: Notice: [Undefined variable: string]
+at file D:\OSPanel\domains\todo-new\library\Api.php in line 42
 =================================================
 
-2018-01-08 21:37:47: Warning: [key() expects parameter 1 to be array, integer given]
-at file D:\OSPanel\domains\todo-new\index.php in line 147
-=================================================
-
-2018-01-18 21:54:39: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 34
-=================================================
-
-2018-01-18 21:55:49: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:3)]
-at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 45
-=================================================
-
-2018-01-18 21:55:58: Notice: [Undefined offset: 0]
-at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 74
-=================================================
-
-2018-01-18 21:55:58: Notice: [Undefined offset: 1]
-at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 75
-=================================================
-
-2018-01-18 21:55:58: Notice: [Undefined offset: 2]
-at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 76
-=================================================
-
-2018-01-18 22:05:38: Parse: [syntax error, unexpected ';', expecting ',' or ')']
-at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 34
-=================================================
-
-2018-01-22 21:58:55: Notice: [Undefined index: login]
-at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 65
-=================================================
-
-2018-01-22 21:58:55: Notice: [Undefined index: password]
-at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 65
-=================================================
-
-2018-01-22 21:58:55: Warning: [Creating default object from empty value]
-at file D:\OSPanel\domains\todo-new\modules\login\main.php in line 79
-=================================================
-
-2018-01-23 21:41:47: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=AQCelIVDc_TIfYKEJ1szsnuHA_ii7tQbkraib_t4OTZpkCP5TMIxu8xn2P7dgmGL8sng9oMHqokHk3woGnkMvorjrG_yFfV2X9xcxRokAJlcAwsX9A6f4mNyJFYM07NmB7ddewI_Rw9T8ruC9o8maTCDpRhkzPuqtUAIO6A0DuafTBrCocy9a844mLnwpjtP1M4B_yhgTid-laipjaRGfhAcusMBxhAI-MUDh-fevDNtRWi1r3ru-gfPEYnoP34eZ1ZTCoC7RUtG3NnAiefFYOglZvI_f1WPRCZvCrYr20151lxoR8tT9XF7vYLPq-bgbOVKc7EfTrYa6uK2dCh-NUbY): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
-]
-at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 26
-=================================================
-
-2018-01-23 21:46:30: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=AQCelIVDc_TIfYKEJ1szsnuHA_ii7tQbkraib_t4OTZpkCP5TMIxu8xn2P7dgmGL8sng9oMHqokHk3woGnkMvorjrG_yFfV2X9xcxRokAJlcAwsX9A6f4mNyJFYM07NmB7ddewI_Rw9T8ruC9o8maTCDpRhkzPuqtUAIO6A0DuafTBrCocy9a844mLnwpjtP1M4B_yhgTid-laipjaRGfhAcusMBxhAI-MUDh-fevDNtRWi1r3ru-gfPEYnoP34eZ1ZTCoC7RUtG3NnAiefFYOglZvI_f1WPRCZvCrYr20151lxoR8tT9XF7vYLPq-bgbOVKc7EfTrYa6uK2dCh-NUbY#_=_): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
-]
-at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
-=================================================
-
-2018-01-23 21:49:03: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=AQDcwoDR7qd9SdtA2RMU85l7LoIJxywknks3_KTl3xGKmoTMWkTkxrU7-3AXjnvVXW_0Ty4nRXeye-HtchUun00VVa52dd4x2RojH8dhnFkLceF3-3ZtvilyBLd6cLlYxnRdvzLMHwd0cGD3AYNEeDk2C0LW_s-q8W3XqD1FJK7dRHSufjJr7Fz7OXKN7hAuTwnNBE42damdn99MjHS7veBb51dwIRF2jglDa0gfTfnMeHCsceRaqRh9YVz015RLJ19RIePtEOJCqa7J8l1NoMRIopGQfcqATvGi8F6VjTWIxmRQAe3kN0joMiaA42MGLw-7S0-A2oeahT_EG5aqN_2d#_=_): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
-]
-at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
-=================================================
-
-2018-01-23 21:50:16: Warning: [file_get_contents(https://graph.facebook.com/v2.11/oauth/access_token?client_id=1645997168798553&amp;redirect_uri=http://todo.kh.ua/&amp;client_secret=c2fb519fc62d15ea2fae9f003136fdf7&amp;code=code=AQBvhynitog--BIowVmLt_W2XjL9DN4IcakAyi73NoTGdUh9-xnAPkUnTPs51SgU9ofmtIvzXp5h40JLss2Pw_J9W7OZ7Chf4wjaXLpTIajh22A4b1doVf4MCTMk6xS_XyBbN2E-Zke_cNskPciU3N3xZtJ7znQjIYtBa9ccIUCijmAEdwL7O5sfwW8E5q5Eb0-AR13_IRQoPS9HQwTQUNcEfxz3q-0uPtrp_XiNrv3n65RawnE98Q3E-Us4DDVykwi73KxB98Eii6P32et8k7vsKRL7peE1gfHqwXP2Kaulr9isNPyJMYlgK37KHiJMJhwloWjdD7V_ksTU29NMByKo#_=_): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
-]
-at file D:\OSPanel\domains\todo-new\modules\_allmodules.php in line 27
-=================================================
-
-2018-01-25 23:16:02: Notice: [Trying to get property of non-object]
-at file D:\OSPanel\domains\todo-new\modules\cab\delapi.php in line 8
-=================================================
-
-2018-01-26 22:35:44: Notice: [Undefined index: page2]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
-=================================================
-
-2018-01-26 22:35:44: Warning: [require(./modules/api/user/.php): failed to open stream: No such file or directory]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
-=================================================
-
-2018-01-26 22:35:44: Complite error: [require(): Failed opening required './modules/api/user/.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
-=================================================
-
-2018-01-26 22:35:50: Warning: [require(./modules/api/user/users.php): failed to open stream: No such file or directory]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
-=================================================
-
-2018-01-26 22:35:50: Complite error: [require(): Failed opening required './modules/api/user/users.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 2
-=================================================
-
-2018-01-26 22:51:58: Warning: [require(./modules/api/user/secrete.php): failed to open stream: No such file or directory]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 6
-=================================================
-
-2018-01-26 22:51:58: Complite error: [require(): Failed opening required './modules/api/user/secrete.php' (include_path='.;d:/ospanel/modules/php/PHP-7.0-x64;d:/ospanel/modules/php/PHP-7.0-x64/PEAR/pear')]
-at file D:\OSPanel\domains\todo-new\modules\api\controller\controller.php in line 6
+2018-01-30 22:40:55: Notice: [Undefined variable: string]
+at file D:\OSPanel\domains\todo-new\library\Api.php in line 40
 =================================================
 
 

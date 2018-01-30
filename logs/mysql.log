@@ -1,76 +1,57 @@
-SET SESSION tx_isolation = 'NULL'
---Variable 'tx_isolation' can't be set to the value of 'NULL'
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 2
---date: 2018-01-08 21:48:40
-===================================
 
-SET SESSION tx_isolation = 'READ UNCOMMITTED'
---Variable 'tx_isolation' can't be set to the value of 'READ UNCOMMITTED'
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 2
---date: 2018-01-08 21:50:12
-===================================
-
-SET SESSION tx_isolation = 'REPEATABLE READ'
---Variable 'tx_isolation' can't be set to the value of 'REPEATABLE READ'
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 2
---date: 2018-01-08 21:51:13
-===================================
-
-SET SESSION transaction_isolation='REPEATABLE-READ';
---Unknown system variable 'transaction_isolation'
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 2
---date: 2018-01-08 21:52:41
-===================================
-
-SET SESSION tx_isolation='NULL';
---Variable 'tx_isolation' can't be set to the value of 'NULL'
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 2
---date: 2018-01-08 21:54:13
-===================================
-
-
-            SELECT SUM(`f2`) FROM `transtable`
+            SELECT *
+            FROM `fw_users
+            WHERE `login` = 'Alex'
+            LIMIT 1
         
---Unknown column 'f2' in 'field list'
---file: D:\OSPanel\domains\todo-new\modules\trans_two\main.php
---line: 30
---date: 2018-01-08 22:45:33
+--Incorrect table name 'fw_users
+            WHERE '
+--file: D:\OSPanel\domains\todo-new\modules\api\user\secret.php
+--line: 35
+--date: 2018-01-29 22:38:41
 ===================================
 
 
-            SELECT SUM(`f2`) FROM `transtable`
-        
---Unknown column 'f2' in 'field list'
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 40
---date: 2018-01-08 22:45:34
+                            UPDATE `fw_users` SET
+                            `facebook_id` = -1,
+                            WHERE `id` = '2'
+                        
+--You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = '2'' at line 3
+--file: D:\OSPanel\domains\todo-new\modules\api\user\secret.php
+--line: 34
+--date: 2018-01-29 22:47:26
 ===================================
 
 
-           INSERT INTO `transtable` SET
-           `f1` = 1
-           FOR INSERT
-        
---You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOR INSERT' at line 3
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 40
---date: 2018-01-08 22:59:32
+                            UPDATE `fw_users` SET
+                            `facebook_id` = -1,
+                            WHERE `id` = '2'
+                        
+--You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = '2'' at line 3
+--file: D:\OSPanel\domains\todo-new\modules\api\user\secret.php
+--line: 34
+--date: 2018-01-29 22:48:30
 ===================================
 
 
-            SELECT `f1` 
-            FROM `transtable` 
-            WHERE `id` = 1;
-            FOR UPDATE
-        
---You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FOR UPDATE' at line 4
---file: D:\OSPanel\domains\todo-new\modules\trans_one\main.php
---line: 52
---date: 2018-01-09 22:28:34
+                            UPDATE `fw_users` SET
+                            `facebook_id` = '-1',
+                            WHERE `id` = '2'
+                        
+--You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = '2'' at line 3
+--file: D:\OSPanel\domains\todo-new\modules\api\user\secret.php
+--line: 34
+--date: 2018-01-29 22:49:49
+===================================
+
+
+                            UPDATE `fw_users` SET
+                            `facebook_id` = '-1',
+                            WHERE `id` = 2
+                        
+--You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `id` = 2' at line 3
+--file: D:\OSPanel\domains\todo-new\modules\api\user\secret.php
+--line: 34
+--date: 2018-01-29 22:50:04
 ===================================
 
