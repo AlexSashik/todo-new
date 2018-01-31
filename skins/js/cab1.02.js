@@ -131,7 +131,7 @@ function delApi() {
                    $('.right_side>div').remove();
                    $(".right_side").append(
                        '<div>Отсутствует</div>' +
-                       '<a href="#" class="add-api">Добавить</a>'
+                       '<a href="https://www.facebook.com/v2.11/dialog/oauth?client_id=1645997168798553&redirect_uri=http://todo.kh.ua/cab&response_type=code" class="add-api">Добавить</a>'
                    );
                } else {
                    alert ('Ой, что-то пошло не так и соцсеть не откреплена. Свяжитесь с нашей техподдержкой для решения вопроса.');

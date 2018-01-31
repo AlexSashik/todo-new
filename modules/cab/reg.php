@@ -6,7 +6,7 @@ if (isset($_SESSION['user'])) {
 
 CORE::$END = '
     <link href="/skins/css/default/cab1.02.css" rel="stylesheet" type="text/css">
-    <script defer src="/skins/js/cab1.01.js"></script>
+    <script defer src="/skins/js/cab1.02.js"></script>
 ';
 CORE::$META['title']  = 'Todo - registration';
 
