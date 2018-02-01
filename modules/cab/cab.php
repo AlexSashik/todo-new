@@ -25,11 +25,20 @@ if (!isset($_SESSION['user'])) {
             header ("Location: /cab");
             exit;
         }
+
         $res = q ("
 			SELECT `facebook_id`
 			FROM `fw_users`
-			WHERE `facebook_id` = ".es($data['id'])."
+			WHERE `facebook_id` = '".es($data['id'])."'
 		");
+        if (!DB::_()->affected_rows) {
+            $res = q ("
+				SELECT `email`
+				FROM `fw_users`
+				WHERE `email` = '".es($data['email'])."'
+			");
+        }
+
         if ($res->num_rows) {
             $row = $res->fetch_assoc();
             $auth = new \FW\User\Authorization;
@@ -128,8 +137,8 @@ if (!isset($_SESSION['user'])) {
         $info_type  = $_SESSION['info'][2];
         unset($_SESSION['info']);
     }
-	
-	// Привязка к аккаунту в Facebook
+
+    // Привязка к аккаунту в Facebook
     if (isset($_GET['code'])) {
         $token = json_decode(file_get_contents('https://graph.facebook.com/v2.11/oauth/access_token?client_id='.Core::$ID.'&redirect_uri='.Core::$URL.'&client_secret='.Core::$SECRET.'&code='.$_GET['code']) , true);
         if (empty($token)) {
@@ -141,22 +150,22 @@ if (!isset($_SESSION['user'])) {
             header ("Location: /cab");
             exit;
         }
-		if (checkUnique('fw_users','facebook_id', $data['id'])) {
-			q ("
+        if (checkUnique('fw_users','facebook_id', $data['id'])) {
+            q ("
 				UPDATE `fw_users` SET
 				`facebook_id` = ".es($data['id'])."
 				WHERE `id` = ".(int)User::$id."
 			");
-			$_SESSION['info'] = array('Связь с Facebook', 'Ваш профиль успешно связался с Вашим аккаунтом в Facebook', 'success');
+            $_SESSION['info'] = array('Связь с Facebook', 'Ваш профиль успешно связался с Вашим аккаунтом в Facebook', 'success');
             header ("Location: /cab");
             exit;
-		} else {
-			$_SESSION['info'] = array('Связь с Facebook', 'Ваш Facebook аккаунт уже привязан к другому профилю на сайте!', 'warning');
+        } else {
+            $_SESSION['info'] = array('Связь с Facebook', 'Ваш Facebook аккаунт уже привязан к другому профилю на сайте!', 'warning');
             header ("Location: /cab");
             exit;
-		}
+        }
     }
-	
+
     if (isset($_POST['login'], $_POST['email'], $_POST['age'], $_POST['pass'], $_POST['pass_repeat'], $_FILES['file'])) {
         $_POST = trimAll($_POST,1);
 

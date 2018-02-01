@@ -55,3 +55,25 @@
 --date: 2018-01-29 22:50:04
 ===================================
 
+
+                    UPDATE `fw_users` SET
+                    `vk` = '-1'
+                    WHERE `id` = 2
+                
+--Unknown column 'vk' in 'field list'
+--file: D:\OSPanel\domains\todo-new\modules\api\user\delsocial.php
+--line: 33
+--date: 2018-02-01 20:45:47
+===================================
+
+
+                    UPDATE `fw_users` SET
+                    `vk` = '-1'
+                    WHERE `id` = 2
+                
+--Unknown column 'vk' in 'field list'
+--file: D:\OSPanel\domains\todo-new\modules\api\user\delsocial.php
+--line: 33
+--date: 2018-02-01 20:46:34
+===================================
+

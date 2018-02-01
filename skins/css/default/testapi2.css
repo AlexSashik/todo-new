@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+.clearfix:after,
+.clearfix:before {
+  clear: both;
+  content: '';
+  display: block;
+  height: 0;
+}
+form {
+  display: block;
+  width: 970px;
+  margin: 10px auto 40px auto;
+  padding: 20px 0 0 0;
+  word-wrap: break-word;
+  box-shadow: 0 0 5px silver;
+  border-radius: 3px;
+}
+form h2 {
+  text-align: center;
+  color: #474747;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+form .lp {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  background-color: #F7F7F7;
+  border-radius: 5px;
+  border: 1px solid #E2E2E2;
+  border-top: 1px solid #C0C0C0;
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px auto;
+}
+form .radio {
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+form label {
+  font-family: 'Open Sans', sans-serif;
+  color: #474747;
+  margin-right: 30px;
+}
+form .buttons {
+  background-color: #F4F2F2;
+  padding: 20px 10px 20px 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+form .buttons button {
+  min-width: 200px;
+  border-radius: 3px;
+  color: white;
+  margin: 10px 5px;
+  background-color: #4A4A4A;
+  background: -moz-linear-gradient(#575757, #393939);
+  background: -webkit-linear-gradient(#575757, #393939);
+  background: -ms-linear-gradient(#575757, #393939);
+  background: -o-linear-gradient(#575757, #393939);
+  background: linear-gradient(#575757, #393939);
+  border: 3px solid #E3E3E3;
+  padding: 10px 30px 10px 30px;
+  font-size: 0.9em;
+}
+form .buttons button:hover {
+  cursor: pointer;
+  background-color: #5299C2;
+  background: -moz-linear-gradient(#62A8CD, #438BB8);
+  background: -webkit-linear-gradient(#62A8CD, #438BB8);
+  background: -ms-linear-gradient(#62A8CD, #438BB8);
+  background: -o-linear-gradient(#62A8CD, #438BB8);
+  background: linear-gradient(#62A8CD, #438BB8);
+}
+form .del_soc {
+  margin-top: 20px;
+}
+form .del_soc button {
+  display: block;
+  margin: 0 auto;
+}
+form .del_soc label {
+  margin: 0 5px;
+}
+form .del_soc input[type='checkbox'] {
+  transform: scale(1.3);
+}
+/*Всплывающий блок*/
+#info_back {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+#info_text {
+  display: none;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  width: 700px;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px black;
+  background-color: white;
+}
+#info_text .info_header {
+  background-color: #149B49;
+  padding: 10px 20px 10px 20px;
+  color: white;
+  font-size: 18px;
+}
+#info_text .info_main {
+  padding: 20px;
+}
+#info_text .info_main pre {
+  font-size: 16px;
+  word-wrap: break-word;
+}
+#info_text .info_main div {
+  text-align: center;
+}
+#info_text #info_close {
+  background-color: #01882E;
+  color: white;
+  padding: 10px 0 10px 0;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+#info_text #info_close:hover {
+  cursor: pointer;
+  background-color: #149B49;
+}

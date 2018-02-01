@@ -10,4 +10,24 @@ at file D:\OSPanel\domains\todo-new\library\Api.php in line 42
 at file D:\OSPanel\domains\todo-new\library\Api.php in line 40
 =================================================
 
+2018-02-01 19:49:31: Notice: [Undefined variable: row]
+at file D:\OSPanel\domains\todo-new\modules\api\user\delsocial.php in line 3
+=================================================
+
+2018-02-01 19:49:31: Notice: [Undefined variable: row]
+at file D:\OSPanel\domains\todo-new\modules\api\user\delsocial.php in line 9
+=================================================
+
+2018-02-01 20:23:05: Error: [Uncaught Error: Call to undefined function array_to_xml() in D:\OSPanel\domains\todo-new\library\Api.php:75
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\library\Api.php(52): Api::array_to_xml(Array, Object(SimpleXMLElement))
+#1 D:\OSPanel\domains\todo-new\modules\api\user\data.php(28): Api::responseRestApi(Array)
+#2 D:\OSPanel\domains\todo-new\modules\api\controller\controller.php(6): require('D:\\OSPanel\\doma...')
+#3 D:\OSPanel\domains\todo-new\index.php(217): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('api/user/data')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\library\Api.php in line 75
+=================================================
+
 
