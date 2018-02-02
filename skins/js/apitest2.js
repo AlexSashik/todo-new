@@ -1,3 +1,33 @@
+function generateJSON(elem, obj, first) {
+    if (first === undefined) first = true;
+    if (first) $(elem).append('{\n');
+    Object.keys(obj).forEach(function(key) {
+        if (Array.isArray(obj[key])) {
+            $(elem).append('"' + key + '": {\n');
+            generateJSON(elem, obj[key], false);
+            $(elem).append('},\n');
+        } else {
+            $(elem).append('"' + key + '": "' + obj[key] + '",\n');
+        }
+    });
+    if (first) $(elem).append('}\n');
+}
+
+function generateXML (elem, obj, first) {
+    if (first === undefined) first = true;
+    if (first) $(elem).append('&lt;response&gt;\n');
+    for (var i = 0; i < obj.length ;i++) {
+        if (obj[i].childNodes.length > 1) {
+            $(elem).append('&lt;' + obj[i].nodeName + '&gt;\n');
+            generateXML(elem,obj[i].childNodes, false);
+            $(elem).append('&lt;/' + obj[i].nodeName + '&gt;\n');
+        } else {
+            $(elem).append('&lt;' + obj[i].nodeName + '&gt;' + obj[i].childNodes[0].nodeValue + '&lt;/' + obj[i].nodeName + '&gt;\n');
+        }
+    }
+    if (first) $(elem).append('&lt;/response&gt;');
+}
+
 function api(query) {
     if (query === undefined) {
         alert ('Не был указан тип запроса');
@@ -5,7 +35,7 @@ function api(query) {
         var login = $('#login').val(),
             pass = $('#pass').val(),
             format = $('.format:checked').val(),
-            url = (query == 'del_social') ? '/api/user/delsocial' : '/api/user/data';
+            url = (query == 'del_social') ? 'http://todo.kh.ua/api/user/delsocial' : 'http://todo.kh.ua/api/user/data';
 
         if (login.trim() == '') {
             alert('Вы не ввели логин');
@@ -35,25 +65,16 @@ function api(query) {
                     timeout: 15000,
                     success: function(resp) {
                         if (resp) {
-                            console.log(resp);
-                            // $("#response").empty();
-                            // if (format == 'json') {
-                            //    $("#response").append('{\n');
-                            //    Object.keys(resp).forEach(function(key) {
-                            //        $("#response").append('     "' + key + '": "' + resp[key] + '",\n');
-                            //    });
-                            //    $("#response").append('}\n');
-                            // } else {
-                            //     var XMLdoc = resp.documentElement.childNodes;
-                            //     $("#response").append('&lt;response&gt;\n');
-                            //     for (var i = 0; i < XMLdoc.length ;i++) {
-                            //         $("#response").append('    &lt;' + XMLdoc[i].nodeName + '&gt;' + XMLdoc[i].childNodes[0].nodeValue + '&lt;/' + XMLdoc[i].nodeName + '&gt;\n');
-                            //     }
-                            //     $("#response").append('&lt;/response&gt;');
-                            // }
-                            // $("#info_back").css("display", "block");
-                            // $("#info_text").css("display", "block");
-                            // $("#info_text").css("opacity", 1);
+                            $("#response").empty();
+                            if (format == 'json') {
+                               generateJSON("#response", resp);
+                            } else {
+                                var xml_obj = resp.documentElement.childNodes;
+                                generateXML("#response", xml_obj);
+                            }
+                            $("#info_back").css("display", "block");
+                            $("#info_text").css("display", "block");
+                            $("#info_text").css("opacity", 1);
                         } else {
                             alert ('Ой, что-то пошло не так и соцсеть не откреплена. Свяжитесь с нашей техподдержкой для решения вопроса.');
                         }

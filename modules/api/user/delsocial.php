@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 
 if (isset($_POST['query']) && is_array($_POST['query']) && count($_POST['query']) != 0) {
     if (isset($_POST['login'], $_POST['pass']) && trim($_POST['login']) != '' && trim($_POST['pass']) != '') {
