@@ -2,8 +2,9 @@ function generateJSON(elem, obj, first) {
     if (first === undefined) first = true;
     if (first) $(elem).append('{\n');
     Object.keys(obj).forEach(function(key) {
-        if (Array.isArray(obj[key])) {
+        if (typeof(obj[key]) == 'object') {
             $(elem).append('"' + key + '": {\n');
+            console.log(obj[key]);
             generateJSON(elem, obj[key], false);
             $(elem).append('},\n');
         } else {
