@@ -17,7 +17,7 @@ function generateXML (elem, obj, first) {
     if (first === undefined) first = true;
     if (first) $(elem).append('&lt;response&gt;\n');
     for (var i = 0; i < obj.length ;i++) {
-        if (obj[i].childNodes.length > 1) {
+        if (obj[i].childNodes[0].nodeValue == null) {
             $(elem).append('&lt;' + obj[i].nodeName + '&gt;\n');
             generateXML(elem,obj[i].childNodes, false);
             $(elem).append('&lt;/' + obj[i].nodeName + '&gt;\n');
