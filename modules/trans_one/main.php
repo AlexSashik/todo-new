@@ -3,6 +3,15 @@
 // READ-COMMITTED
 // REPEATABLE-READ
 // SERIALIZABLE
+//// переменная по ссылке
+//function foo(&$var)
+//{
+//    $var++;
+//}
+//
+//$a=5;
+//foo($a);
+//wtf($a);
 
 if (isset($_GET['tx_level'])) {
     if ($_GET['tx_level'] == 1) {

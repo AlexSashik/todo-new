@@ -30,4 +30,138 @@ Stack trace:
 at file D:\OSPanel\domains\todo-new\library\Api.php in line 75
 =================================================
 
+2018-02-11 22:01:20: Warning: [date() expects at least 1 parameter, 0 given]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 2
+=================================================
+
+2018-02-11 22:49:04: Error: [Uncaught Error: Class 'Cache' not found in D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl:1
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(229): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('luckyuser')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 1
+=================================================
+
+2018-02-11 23:05:01: Parse: [syntax error, unexpected '}', expecting ',' or ';']
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:05:20: Parse: [syntax error, unexpected '}', expecting ',' or ';']
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(61) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:05:34: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:05:34: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:07:33: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:07:33: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:10:54: Parse: [syntax error, unexpected end of file]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 27
+=================================================
+
+2018-02-11 23:14:00: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(61) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:14:18: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-11 23:14:18: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:42:41: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:42:41: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:44:42: Error: [Uncaught Exception: Был передан массив, необходимо передавать строку in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:53
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code(1): hc(1)
+#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88): eval()
+#2 D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl(18): FW\Cache\Cache::endCache()
+#3 D:\OSPanel\domains\todo-new\index.php(229): require('D:\\OSPanel\\doma...')
+#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('luckyuser')
+#5 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php in line 53
+=================================================
+
+2018-02-12 21:47:01: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:47:01: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:47:27: Error: [Uncaught Error: Class 'Cache' not found in D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl:3
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(229): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('luckyuser')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 3
+=================================================
+
+2018-02-12 21:57:55: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:57:55: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:59:11: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:59:11: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
+2018-02-12 21:59:21: Warning: [Invalid argument supplied for foreach()]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(61) : eval()'d code in line 1
+=================================================
+
+2018-02-12 22:03:51: Notice: [Undefined index: data]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 4
+=================================================
+
+2018-02-12 22:04:31: Notice: [Undefined index: foo]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 6
+=================================================
+
+2018-02-12 22:12:09: Notice: [Undefined index: foo]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 8
+=================================================
+
+2018-02-12 22:19:04: Notice: [Undefined index: foo]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 8
+=================================================
+
+2018-02-12 22:24:22: Notice: [Undefined index: foo]
+at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 7
+=================================================
+
+2018-02-12 22:39:49: Notice: [Undefined variable: data]
+at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+=================================================
+
 
