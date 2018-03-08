@@ -6,7 +6,7 @@
                 <div class="progress <?php echo hp_color($_SESSION['user_hp'])?>" id="leftValue" data-leftValue="<?php echo $_SESSION['user_hp']*19.6;?>"></div>
             </div>
             <?php
-            if (isset(User::$login)) {
+            if (!empty(User::$login)) {
                 echo htmlspecialchars(User::$login);
             } else {
                 echo 'Гость';

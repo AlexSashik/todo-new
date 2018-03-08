@@ -22,15 +22,6 @@ if (!my_session_start()) {
     session_regenerate_id();
 }
 
-class User extends \FW\User\User {
-	static $avatar = '';
-    static $age = '';
-    static $email = '';
-    static $lastactive;
-    static $facebook_id;
-	static $datas = ['id','role','login','avatar', 'age', 'email', 'lastactive', 'facebook_id'];
-}
-
 User::start(isset($_SESSION['user']['id']) ? ['id' => (int)$_SESSION['user']['id']] : []);
 
 if(!isset($_SESSION['antixsrf'])) {

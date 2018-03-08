@@ -1,6 +1,6 @@
 <script>
     var status = <?php
-        if (isset(User::$data)) {
+        if (!is_null(User::$data)) {
             if (User::$role == 'admin') {
                 echo 5;
             } else {

@@ -1,5 +1,6 @@
 <?php
-class MailMy {
+class MailMy
+{
     static $subject = '';
     static $from = 'noreply@todo.kh.ua';
     static $to = '';

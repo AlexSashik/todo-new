@@ -30,7 +30,7 @@
             <p class="first_line">
                 <strong>
                     <?php
-                    if (isset(User::$login)) echo htmlspecialchars(User::$login); else echo 'Пользователь'
+                    if (!empty(User::$login)) echo htmlspecialchars(User::$login); else echo 'Пользователь'
                     ?>
                 </strong>
             </p>

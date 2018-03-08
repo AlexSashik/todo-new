@@ -12,6 +12,18 @@
 //$a=5;
 //foo($a);
 //wtf($a);
+Class Test1
+{
+    static $x = 1;
+    static function show() {
+        return static::$x;
+    }
+}
+Class Test2 extends Test1
+{
+    static $x = 2;
+}
+echo Test1::show(); // Выведет 1
 
 if (isset($_GET['tx_level'])) {
     if ($_GET['tx_level'] == 1) {

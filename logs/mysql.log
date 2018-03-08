@@ -77,3 +77,10 @@
 --date: 2018-02-01 20:46:34
 ===================================
 
+POST
+--You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'POST' at line 1
+--file: D:\OSPanel\domains\todo-new\library\User.php
+--line: 32
+--date: 2018-03-08 22:07:11
+===================================
+

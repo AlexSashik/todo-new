@@ -3,6 +3,7 @@
 .git/
 /vendor/
 composer.phar
+/modules/test/
 *.ipr
 *.iws
 /out/

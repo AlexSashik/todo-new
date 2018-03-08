@@ -1,167 +1,207 @@
-2018-01-28 23:21:33: Notice: [Array to string conversion]
-at file D:\OSPanel\domains\todo-new\modules\api\user\secret.php in line 15
-=================================================
-
-2018-01-30 22:40:55: Notice: [Undefined variable: string]
-at file D:\OSPanel\domains\todo-new\library\Api.php in line 42
-=================================================
-
-2018-01-30 22:40:55: Notice: [Undefined variable: string]
-at file D:\OSPanel\domains\todo-new\library\Api.php in line 40
-=================================================
-
-2018-02-01 19:49:31: Notice: [Undefined variable: row]
-at file D:\OSPanel\domains\todo-new\modules\api\user\delsocial.php in line 3
-=================================================
-
-2018-02-01 19:49:31: Notice: [Undefined variable: row]
-at file D:\OSPanel\domains\todo-new\modules\api\user\delsocial.php in line 9
-=================================================
-
-2018-02-01 20:23:05: Error: [Uncaught Error: Call to undefined function array_to_xml() in D:\OSPanel\domains\todo-new\library\Api.php:75
+2018-02-23 22:59:29: Error: [Uncaught Error: Class 'Test\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
 Stack trace:
-#0 D:\OSPanel\domains\todo-new\library\Api.php(52): Api::array_to_xml(Array, Object(SimpleXMLElement))
-#1 D:\OSPanel\domains\todo-new\modules\api\user\data.php(28): Api::responseRestApi(Array)
-#2 D:\OSPanel\domains\todo-new\modules\api\controller\controller.php(6): require('D:\\OSPanel\\doma...')
-#3 D:\OSPanel\domains\todo-new\index.php(217): require('D:\\OSPanel\\doma...')
-#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('api/user/data')
-#5 {main}
-  thrown]
-at file D:\OSPanel\domains\todo-new\library\Api.php in line 75
-=================================================
-
-2018-02-11 22:01:20: Warning: [date() expects at least 1 parameter, 0 given]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 2
-=================================================
-
-2018-02-11 22:49:04: Error: [Uncaught Error: Class 'Cache' not found in D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl:1
-Stack trace:
-#0 D:\OSPanel\domains\todo-new\index.php(229): require()
-#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('luckyuser')
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
 #2 {main}
   thrown]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 1
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-11 23:05:01: Parse: [syntax error, unexpected '}', expecting ',' or ';']
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:05:20: Parse: [syntax error, unexpected '}', expecting ',' or ';']
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(61) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:05:34: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:05:34: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:07:33: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:07:33: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:10:54: Parse: [syntax error, unexpected end of file]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 27
-=================================================
-
-2018-02-11 23:14:00: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(61) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:14:18: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-11 23:14:18: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-12 21:42:41: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-12 21:42:41: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-12 21:44:42: Error: [Uncaught Exception: Был передан массив, необходимо передавать строку in D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:53
+2018-02-23 22:59:48: Error: [Uncaught Error: Class 'Test\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
 Stack trace:
-#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code(1): hc(1)
-#1 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88): eval()
-#2 D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl(18): FW\Cache\Cache::endCache()
-#3 D:\OSPanel\domains\todo-new\index.php(229): require('D:\\OSPanel\\doma...')
-#4 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('luckyuser')
-#5 {main}
-  thrown]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php in line 53
-=================================================
-
-2018-02-12 21:47:01: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-12 21:47:01: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
-=================================================
-
-2018-02-12 21:47:27: Error: [Uncaught Error: Class 'Cache' not found in D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl:3
-Stack trace:
-#0 D:\OSPanel\domains\todo-new\index.php(229): require()
-#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('luckyuser')
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
 #2 {main}
   thrown]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 3
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 21:57:55: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+2018-02-23 23:00:27: Error: [Uncaught Error: Class 'Test\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 21:57:55: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+2018-02-23 23:01:48: Error: [Uncaught Error: Class 'Test\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 21:59:11: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+2018-02-23 23:02:40: Error: [Uncaught Error: Class 'Test\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 21:59:11: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+2018-02-23 23:07:20: Error: [Uncaught Error: Class 'Ttest\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 21:59:21: Warning: [Invalid argument supplied for foreach()]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(61) : eval()'d code in line 1
+2018-02-23 23:07:45: Error: [Uncaught Error: Class 'Ttest\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 22:03:51: Notice: [Undefined index: data]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 4
+2018-02-23 23:09:41: Deprecated: [Methods with the same name as their class will not be constructors in a future version of PHP; Hello has a deprecated constructor]
+at file D:\OSPanel\domains\todo-new\library\test\hello.php in line 5
 =================================================
 
-2018-02-12 22:04:31: Notice: [Undefined index: foo]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 6
+2018-02-23 23:09:41: Error: [Uncaught Error: Class 'Test\Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:44
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 44
 =================================================
 
-2018-02-12 22:12:09: Notice: [Undefined index: foo]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 8
+2018-02-23 23:20:06: Warning: [The use statement with non-compound name 'Test' has no effect]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 2
 =================================================
 
-2018-02-12 22:19:04: Notice: [Undefined index: foo]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 8
+2018-02-23 23:22:45: Error: [Uncaught Error: Class 'Hello' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:45
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 45
 =================================================
 
-2018-02-12 22:24:22: Notice: [Undefined index: foo]
-at file D:\OSPanel\domains\todo-new\modules\luckyuser\view\main.tpl in line 7
+2018-02-26 22:01:16: Error: [Uncaught Error: Class 'Test' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:45
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 45
 =================================================
 
-2018-02-12 22:39:49: Notice: [Undefined variable: data]
-at file D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Cache\Cache.php(88) : eval()'d code in line 1
+2018-02-26 22:01:24: Error: [Uncaught Error: Class 'Test' not found in D:\OSPanel\domains\todo-new\modules\test\main.php:45
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 45
+=================================================
+
+2018-02-26 23:21:40: Notice: [Array to string conversion]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 3
+=================================================
+
+2018-02-26 23:26:40: Notice: [Undefined variable: 5 a.m.]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 4
+=================================================
+
+2018-02-26 23:27:14: Notice: [Undefined variable: 5 a.m.]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 4
+=================================================
+
+2018-02-26 23:42:33: Error: [Uncaught Error: Call to undefined function isees() in D:\OSPanel\domains\todo-new\modules\test\main.php:3
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\index.php(223): require()
+#1 D:\OSPanel\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 3
+=================================================
+
+2018-03-06 21:27:13: Notice: [Undefined variable: key]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 40
+=================================================
+
+2018-03-06 21:27:13: Notice: [Undefined variable: key]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 40
+=================================================
+
+2018-03-06 21:27:13: Notice: [Undefined variable: key]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 40
+=================================================
+
+2018-03-06 21:27:13: Notice: [Undefined variable: key]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 40
+=================================================
+
+2018-03-06 21:27:13: Notice: [Undefined variable: key]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 40
+=================================================
+
+2018-03-06 21:33:09: Warning: [Missing argument 2 for h(), called in D:\OSPanel\domains\todo-new\modules\test\main.php on line 51 and defined]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 48
+=================================================
+
+2018-03-06 21:34:01: Warning: [Missing argument 2 for h(), called in D:\OSPanel\domains\todo-new\modules\test\main.php on line 47 and defined]
+at file D:\OSPanel\domains\todo-new\modules\test\main.php in line 49
+=================================================
+
+2018-03-08 20:01:48: Error: [Trait 'traits\BadIp' not found]
+at file D:\OSPanel\domains\todo-new\library\User.php in line 5
+=================================================
+
+2018-03-08 20:01:58: Error: [Trait 'traits\BadIp' not found]
+at file D:\OSPanel\domains\todo-new\library\User.php in line 5
+=================================================
+
+2018-03-08 20:02:04: Error: [Uncaught Error: Undefined constant 'traits\BadIp' in D:\OSPanel\domains\todo-new\library\traits\badip.php:3
+Stack trace:
+#0 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php(83): require()
+#1 [internal function]: myAuthoload('traits\\BadIp')
+#2 D:\OSPanel\domains\todo-new\library\User.php(5): spl_autoload_call('traits\\BadIp')
+#3 D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php(72): require('D:\\OSPanel\\doma...')
+#4 [internal function]: myAuthoload('User')
+#5 D:\OSPanel\domains\todo-new\modules\_allmodules.php(25): spl_autoload_call('User')
+#6 D:\OSPanel\domains\todo-new\index.php(56): require('D:\\OSPanel\\doma...')
+#7 {main}
+  thrown]
+at file D:\OSPanel\domains\todo-new\library\traits\badip.php in line 3
+=================================================
+
+2018-03-08 20:02:10: Error: [Trait 'traits\BadIp' not found]
+at file D:\OSPanel\domains\todo-new\library\User.php in line 5
+=================================================
+
+2018-03-08 20:03:40: Error: [Trait 'traitss\BadIp' not found]
+at file D:\OSPanel\domains\todo-new\library\User.php in line 5
+=================================================
+
+2018-03-08 21:58:34: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:3)]
+at file D:\OSPanel\domains\todo-new\modules\admin\books\edit.php in line 138
+=================================================
+
+2018-03-08 22:18:57: Warning: [Cannot modify header information - headers already sent by (output started at D:\OSPanel\domains\todo-new\vendor\schoolphp\library\Core\functions.php:3)]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 106
+=================================================
+
+2018-03-08 22:19:11: Notice: [Undefined offset: 0]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 135
+=================================================
+
+2018-03-08 22:19:11: Notice: [Undefined offset: 1]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 136
+=================================================
+
+2018-03-08 22:19:11: Notice: [Undefined offset: 2]
+at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 137
 =================================================
 
 
