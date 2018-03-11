@@ -204,4 +204,112 @@ at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 136
 at file D:\OSPanel\domains\todo-new\modules\cab\cab.php in line 137
 =================================================
 
+2018-03-09 22:11:25: Warning: [date() expects at least 1 parameter, 0 given]
+at file W:\domains\todo-new\library\mydate.php in line 7
+=================================================
+
+2018-03-09 22:21:04: Warning: [date_modify() expects parameter 1 to be DateTime, string given]
+at file W:\domains\todo-new\library\mydate.php in line 7
+=================================================
+
+2018-03-09 22:53:19: Notice: [Undefined variable: month]
+at file W:\domains\todo-new\library\mydate.php in line 13
+=================================================
+
+2018-03-09 22:53:27: Notice: [Undefined variable: month]
+at file W:\domains\todo-new\library\mydate.php in line 13
+=================================================
+
+2018-03-09 22:55:45: Warning: [preg_match(): No ending delimiter '#' found]
+at file W:\domains\todo-new\library\mydate.php in line 11
+=================================================
+
+2018-03-11 20:10:04: Error: [Uncaught ArgumentCountError: Too few arguments to function MyDateAdapter::format(), 0 passed in W:\domains\todo-new\modules\test\main.php on line 11 and exactly 1 expected in W:\domains\todo-new\library\MyDateAdapter.php:7
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(11): MyDateAdapter->format()
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 7
+=================================================
+
+2018-03-11 20:10:05: Error: [Uncaught ArgumentCountError: Too few arguments to function MyDateAdapter::format(), 0 passed in W:\domains\todo-new\modules\test\main.php on line 11 and exactly 1 expected in W:\domains\todo-new\library\MyDateAdapter.php:7
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(11): MyDateAdapter->format()
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 7
+=================================================
+
+2018-03-11 21:24:00: Error: [Uncaught Exception: DateTime::__construct(): Failed to parse time string (blas) at position 0 (b): The timezone could not be found in the database in W:\domains\todo-new\modules\test\main.php:13
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(13): DateTime->__construct('blas')
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 13
+=================================================
+
+2018-03-11 21:25:19: Warning: [DateTime::__construct(): Failed to parse time string (blas) at position 0 (b): The timezone could not be found in the database]
+at file W:\domains\todo-new\modules\test\main.php in line 14
+=================================================
+
+2018-03-11 21:29:39: Warning: [DateTime::__construct(): Failed to parse time string (12 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 10
+=================================================
+
+2018-03-11 21:30:23: Error: [Uncaught Exception: DateTime::__construct(): Failed to parse time string (12 марта 2018 года) at position 0 (1): Unexpected character in W:\domains\todo-new\library\MyDateAdapter.php:9
+Stack trace:
+#0 W:\domains\todo-new\library\MyDateAdapter.php(9): DateTime->__construct('12 \xD0\xBC\xD0\xB0\xD1\x80\xD1\x82\xD0\xB0 2...')
+#1 W:\domains\todo-new\modules\test\main.php(12): MyDateAdapter->format('12 \xD0\xBC\xD0\xB0\xD1\x80\xD1\x82\xD0\xB0 2...')
+#2 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#3 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#4 {main}
+  thrown]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 9
+=================================================
+
+2018-03-11 21:30:30: Warning: [DateTime::__construct(): Failed to parse time string (12 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 10
+=================================================
+
+2018-03-11 21:30:41: Warning: [DateTime::__construct(): Failed to parse time string (12 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 10
+=================================================
+
+2018-03-11 21:30:42: Warning: [DateTime::__construct(): Failed to parse time string (12 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 10
+=================================================
+
+2018-03-11 21:33:35: Warning: [Use of undefined constant echo2 - assumed 'echo2' (this will throw an Error in a future version of PHP)]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 15
+=================================================
+
+2018-03-11 21:39:42: Error: [Uncaught Exception: Введен некорректный формат даты in W:\domains\todo-new\library\MyDateAdapter.php:8
+Stack trace:
+#0 W:\domains\todo-new\library\MyDateAdapter.php(15): MyDateAdapter->getError()
+#1 W:\domains\todo-new\modules\test\main.php(12): MyDateAdapter->format('asd')
+#2 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#3 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#4 {main}
+  thrown]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 8
+=================================================
+
+2018-03-11 22:05:35: Warning: [DateTime::__construct(): Failed to parse time string (32-06-2018) at position 8 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 26
+=================================================
+
+2018-03-11 22:06:59: Warning: [DateTime::__construct(): Failed to parse time string (22--2018) at position 0 (2): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 24
+=================================================
+
+2018-03-11 22:56:54: Error: [Trait 'traits\NumToMonth' not found]
+at file W:\domains\todo-new\library\MyDate.php in line 10
+=================================================
+
 
