@@ -312,4 +312,43 @@ at file W:\domains\todo-new\library\MyDateAdapter.php in line 24
 at file W:\domains\todo-new\library\MyDate.php in line 10
 =================================================
 
+2018-03-12 22:26:22: Error: [Uncaught Exception: DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character in W:\domains\todo-new\library\MyDateAdapter.php:21
+Stack trace:
+#0 W:\domains\todo-new\library\MyDateAdapter.php(21): DateTime->__construct('13 \xD0\xBC\xD0\xB0\xD1\x80\xD1\x82\xD0\xB0 2...')
+#1 W:\domains\todo-new\modules\test\main.php(14): MyDateAdapter->format()
+#2 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#3 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#4 {main}
+  thrown]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 21
+=================================================
+
+2018-03-12 22:27:50: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 22
+=================================================
+
+2018-03-12 22:28:53: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 23
+=================================================
+
+2018-03-12 22:29:02: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 23
+=================================================
+
+2018-03-12 22:30:06: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 23
+=================================================
+
+2018-03-12 22:30:22: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 23
+=================================================
+
+2018-03-12 22:30:24: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 23
+=================================================
+
+2018-03-12 22:32:01: Warning: [DateTime::__construct(): Failed to parse time string (13 марта 2018 года) at position 0 (1): Unexpected character]
+at file W:\domains\todo-new\library\MyDateAdapter.php in line 22
+=================================================
+
 

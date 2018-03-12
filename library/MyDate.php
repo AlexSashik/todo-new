@@ -4,7 +4,7 @@
  * Class MyDate is used for obtain next date in the format 01 июня 2016 года (in your language)
  *
  */
-class MyDate
+class MyDate implements \interfaces\MyDateInterface
 {
 
     use \traits\NumToMonth;

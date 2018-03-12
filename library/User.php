@@ -5,7 +5,13 @@
  */
 class User extends \FW\User\User {
 
-    use \traits\BadIp;
+    /**
+     * @var array
+     */
+    static $badip = [
+        '127.0.0.2',
+    ];
+
     /**
      * @var string
      */
