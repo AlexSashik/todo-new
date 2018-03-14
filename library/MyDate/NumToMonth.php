@@ -1,6 +1,6 @@
 <?php
 
-namespace traits;
+namespace MyDate;
 /**
  * Trait NumToMonth contains correspondence of numbers and month notation in different languages
  * @package traits

@@ -351,4 +351,22 @@ at file W:\domains\todo-new\library\MyDateAdapter.php in line 23
 at file W:\domains\todo-new\library\MyDateAdapter.php in line 22
 =================================================
 
+2018-03-14 20:04:59: Error: [Uncaught Error: Class 'MyDate' not found in W:\domains\todo-new\modules\test\main.php:11
+Stack trace:
+#0 W:\domains\todo-new\index.php(223): require()
+#1 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 11
+=================================================
+
+2018-03-14 20:07:35: Error: [Uncaught Error: Class 'MyDate' not found in W:\domains\todo-new\modules\test\main.php:9
+Stack trace:
+#0 W:\domains\todo-new\index.php(223): require()
+#1 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 9
+=================================================
+
 

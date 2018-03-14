@@ -6,6 +6,7 @@
 class User extends \FW\User\User {
 
     /**
+     * Массив всех ip, блокируемых на сайте
      * @var array
      */
     static $badip = [
@@ -37,13 +38,16 @@ class User extends \FW\User\User {
      */
     static $datas = ['id','role','login','avatar', 'age', 'email', 'lastactive', 'facebook_id'];
     /**
+     * свойство отвечает за наличие (значение 1 для неавторизованных пользователей)
+     * или отсутствие (значение 0 для авторизованных пользователей) капчи для форм
      * @var int
      */
     static $captcha = 0;
 
     /**
-     * Method Start extends the correspond method of the standard Creative FW's class User;
-     * it blocks certain ips, carries out logout operation for banned users and monitors admin's actions
+     * Этот класс расширяет базовый класс \FW\User\User и расширяет работу метода Start: при вызове проверяется
+     * доступы по IP, вывыполняется logout для забаненых пользователей, проверяется необходимость вывода капчи для форм
+     * (всем неавторизированным пользователям в обязательном порядке выводится)и логируются передвижения админа.
      * @param array $auth
      * @return null|void
      */
@@ -63,11 +67,11 @@ class User extends \FW\User\User {
             \FW\User\Authorization::logout();
             redirect('/');
         } elseif (self::$role == 'admin' && isset($_GET['route']) && preg_match('#^admin(/.*|)$#ui', $_GET['route'])) {
-            $method = (!empty($_POST)) ? 'POST' : 'GET';
+            $method = $_SERVER['REQUEST_METHOD'];
             q("
                 INSERT INTO `monitor_admin` SET
                 `admin_id` = ".(int)self::$id.",
-                `url` = '".Core::$DOMAIN.$_SERVER['REDIRECT_URL']."',
+                `url` = '".es(Core::$DOMAIN.$_SERVER['REQUEST_URI'])."',
                 `date` = NOW(),
                 `method` = '".$method."'
             ");

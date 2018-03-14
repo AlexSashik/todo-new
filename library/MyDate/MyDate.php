@@ -1,16 +1,19 @@
 <?php
 
+namespace MyDate;
+
 /**
- * Class MyDate is used for obtain next date in the format 01 июня 2016 года (in your language)
+ * Класс MyDate используется для получения завтрашнего дня в формате 01 июня 2016 года (на Вашем языке)
  *
  */
-class MyDate implements \interfaces\MyDateInterface
+class MyDate implements MyDateInterface
 {
 
-    use \traits\NumToMonth;
+    use NumToMonth;
 
     /**
-     * Method getNextDay returns next day date in the format 01 июня 2016 года in your language
+     * Метод getNextDay возвращает завтрашний день в формате 01 июня 2016 года.
+     * Необязательный параметр указывет на язык выводимой информации. По умолчанию язык русский.
      * @param string $lang
      * @return string
      */
