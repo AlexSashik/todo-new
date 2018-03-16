@@ -33,10 +33,12 @@
                 <div id="game_nav">
                     <a href="/games/alcoholics" class="animate">buttle of alcoholics</a>
                     <a href="/games/cities" class="animate">the cities</a>
+                    <a href="/games/snake" class="animate">snake</a>
                 </div>
                 <div id="demo_nav">
                     <a href="http://agrolux.todo.kh.ua" target="_blank" class="animate">agrolux</a>
                     <a href="http://vatel.todo.kh.ua" target="_blank" class="animate">vatel</a>
+                    <a href="http://layout.todo.kh.ua" target="_blank" class="animate">layout</a>
                 </div>
             </nav>
         </div>

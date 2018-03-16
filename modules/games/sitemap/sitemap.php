@@ -3,6 +3,7 @@ return [
     'main'       => [],
     'alcoholics' => [],
     'gameover'   => [],
+    'snake'      => [],
     'cities'     => [],
     'ajax'       => [],
 ];

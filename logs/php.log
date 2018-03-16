@@ -369,4 +369,81 @@ Stack trace:
 at file W:\domains\todo-new\modules\test\main.php in line 9
 =================================================
 
+2018-03-15 14:52:41: Parse: [syntax error, unexpected 'As' (T_AS)]
+at file W:\domains\todo-new\modules\test\main.php in line 22
+=================================================
+
+2018-03-15 15:19:06: Error: [Uncaught Error: Class 'Foo\ReflectionClass' not found in W:\domains\todo-new\modules\test\main.php:12
+Stack trace:
+#0 W:\domains\todo-new\index.php(223): require()
+#1 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#2 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 12
+=================================================
+
+2018-03-15 16:15:54: Warning: [sprintf(): Too few arguments]
+at file W:\domains\todo-new\modules\test\main.php in line 4
+=================================================
+
+2018-03-15 16:16:53: Warning: [sprintf(): Too few arguments]
+at file W:\domains\todo-new\modules\test\main.php in line 4
+=================================================
+
+2018-03-15 16:16:53: Warning: [sprintf(): Too few arguments]
+at file W:\domains\todo-new\modules\test\main.php in line 4
+=================================================
+
+2018-03-15 16:36:05: Complite error: [Class Bob is not a trait, Only traits may be used in 'as' and 'insteadof' statements]
+at file W:\domains\todo-new\modules\test\main.php in line 16
+=================================================
+
+2018-03-15 16:36:41: Complite error: [Access level to ReturnAliasName::getName() must be public (as in class Bob)]
+at file W:\domains\todo-new\modules\test\main.php in line 16
+=================================================
+
+2018-03-15 16:40:51: Complite error: [Access level to ReturnAliasName::getName() must be public (as in class Bob)]
+at file W:\domains\todo-new\modules\test\main.php in line 16
+=================================================
+
+2018-03-15 17:06:27: Error: [Uncaught Error: Cannot access private property Bar::$name in W:\domains\todo-new\modules\test\main.php:7
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(15): Foo::getName()
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 7
+=================================================
+
+2018-03-15 17:06:46: Error: [Uncaught Error: Cannot access  property Bar::$name in W:\domains\todo-new\modules\test\main.php:7
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(15): Foo::getName()
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 7
+=================================================
+
+2018-03-15 17:07:05: Error: [Uncaught Error: Cannot access private property Bar::$name in W:\domains\todo-new\modules\test\main.php:7
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(15): Foo::getName()
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 7
+=================================================
+
+2018-03-15 17:14:32: Error: [Uncaught Error: Cannot access private property Bar::$name in W:\domains\todo-new\modules\test\main.php:7
+Stack trace:
+#0 W:\domains\todo-new\modules\test\main.php(15): Foo::getName()
+#1 W:\domains\todo-new\index.php(223): require('W:\\domains\\todo...')
+#2 W:\domains\todo-new\index.php(247): FrontController::init('test')
+#3 {main}
+  thrown]
+at file W:\domains\todo-new\modules\test\main.php in line 7
+=================================================
+
 
