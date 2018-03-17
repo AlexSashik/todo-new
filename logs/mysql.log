@@ -84,3 +84,13 @@ POST
 --date: 2018-03-08 22:07:11
 ===================================
 
+
+            SELECT * FROM `books2authors`
+            WHERE `book_id` IN (, )
+        
+--You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' )' at line 2
+--file: W:\domains\todo-new\modules\books\books.php
+--line: 65
+--date: 2018-03-17 18:49:35
+===================================
+

@@ -6,15 +6,15 @@ class Paginator {
     static $shownumbers = true;
 
     // функция, возвращающая "лимитированный" запрос от данного + количество фракций данной страницы
-    static function paginator_query ($table, $page = 1, $additional = "") {
+    static function paginator_query ($table, $what_select = '*', $page = 1, $additional = "") {
         if( $page < 1  ) {
-            header ("Location: /".$_GET['module']);
+            header ("Location: /".$_GET['_module']);
             exit();
         }
 
-        $first = self::$howblocks*($page-1);
+        $first = self::$howblocks * ($page - 1);
         $res = q ("
-            SELECT SQL_CALC_FOUND_ROWS * FROM `".es($table)."`
+            SELECT SQL_CALC_FOUND_ROWS ".$what_select." FROM `".es($table)."`
             ".$additional."
             LIMIT ".$first.", ".self::$howblocks."
         ");
@@ -29,7 +29,7 @@ class Paginator {
 
         if( $page > $how_total_pages ) {
             $res ->close();
-            header ("Location: /".$_GET['module']);
+            header ("Location: /".$_GET['_module']);
             exit();
         }
 

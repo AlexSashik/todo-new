@@ -446,4 +446,36 @@ Stack trace:
 at file W:\domains\todo-new\modules\test\main.php in line 7
 =================================================
 
+2018-03-17 17:30:46: Notice: [Undefined index: module]
+at file W:\domains\todo-new\library\Paginator.php in line 32
+=================================================
+
+2018-03-17 17:30:57: Notice: [Undefined index: module]
+at file W:\domains\todo-new\library\Paginator.php in line 32
+=================================================
+
+2018-03-17 18:18:45: Notice: [Undefined index: book_ids]
+at file W:\domains\todo-new\modules\books\books.php in line 27
+=================================================
+
+2018-03-17 18:18:45: Notice: [Undefined index: name]
+at file W:\domains\todo-new\modules\books\view\books.tpl in line 11
+=================================================
+
+2018-03-17 18:49:35: Notice: [Undefined index: id]
+at file W:\domains\todo-new\modules\books\books.php in line 57
+=================================================
+
+2018-03-17 18:49:35: Notice: [Undefined index: id]
+at file W:\domains\todo-new\modules\books\books.php in line 58
+=================================================
+
+2018-03-17 18:49:35: Notice: [Undefined index: id]
+at file W:\domains\todo-new\modules\books\books.php in line 57
+=================================================
+
+2018-03-17 18:49:35: Notice: [Undefined index: id]
+at file W:\domains\todo-new\modules\books\books.php in line 58
+=================================================
+
 

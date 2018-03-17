@@ -19,8 +19,6 @@ window.onload = function () {
         cooldown            = false, // is key in cooldown mode
         score               = 0; // current score
 
-
-
     // game main loop
     function loop() {
         // logic

@@ -2,86 +2,51 @@
 CORE::$META['title']  = 'Todo - books';
 CORE::$END = '<link href="/skins/css/default/books1.00.css" rel="stylesheet" type="text/css">';
 
-if (isset($_GET['pagenumber'])) {
-    $_GET['pagenumber'] = (int)$_GET['pagenumber'];
-} else {
-    $_GET['pagenumber'] = 1;
-}
+$_GET['pagenumber'] = $_GET['pagenumber'] ?? 1;
 
 if (isset($_GET['id'])) {
     $author_res = q ("
-        SELECT * FROM `authors`
-        WHERE `id` = ".(int)$_GET['id']."
+        SELECT `authors`.`name`, `authors`.`img_name`, GROUP_CONCAT(`books2authors`.`book_id` SEPARATOR ', ') as `book_ids`
+        FROM `authors`
+        LEFT JOIN `books2authors` ON `books2authors`.`author_id` = `authors`.`id`
+        WHERE `authors`.`id` =  ".(int)$_GET['id']."
+        GROUP BY `authors`.`id`
     ");
+
     if (!$author_res->num_rows) {
         header ('Location: /books');
         exit;
     }
 
-    $author_search = $author_res->fetch_assoc();
-    if (empty($author_search['img_name'])) {
-        $author_search['img_name'] = 'nophoto.png';
+    $author_row = $author_res->fetch_assoc();
+
+    if (empty($author_row['img_name'])) {
+        $author_row['img_name'] = 'nophoto.png';
     }
 
-    $res_by_auth = q ("
-		SELECT * FROM `books2authors`
-		WHERE `author_id` = ".(int)$_GET['id']."
-	");
-
-    $ids_array = array();
-    if ($res_by_auth->num_rows) {
-        while ($row = $res_by_auth->fetch_assoc()) {
-            $ids_array[] = $row['book_id'];
-        }
-        $ids = implode (', ', $ids_array);
-        unset ($ids_array);
-        list ($res, $how_total_pages) = Paginator::paginator_query('books', (int)$_GET['pagenumber'],"WHERE `id` IN (".$ids.")");
+    if (!is_null($author_row['book_ids'])) {
+        list ($res, $how_total_pages) = Paginator::paginator_query(
+            'books',
+            "`books`.*, GROUP_CONCAT(`authors`.`name` SEPARATOR ', ') as `authors`",
+            (int)$_GET['pagenumber'],
+            "
+                LEFT JOIN `books2authors` ON `books2authors`.`book_id` = `books`.`id`
+                LEFT JOIN `authors` ON `books2authors`.`author_id` = `authors`.`id`
+                WHERE `books`.`id` IN (".$author_row['book_ids'].")
+                GROUP BY `books`.`id`
+            "
+        );
         $get_id_auth = '?id='.$_GET['id'];
     }
 } else {
-    list ($res, $how_total_pages) = Paginator::paginator_query('books', (int)$_GET['pagenumber']);
+    list ($res, $how_total_pages) = Paginator::paginator_query(
+        'books',
+        '`books`.*, GROUP_CONCAT(`authors`.`name` SEPARATOR \', \') as `authors`',
+        (int)$_GET['pagenumber'],
+        "
+            LEFT JOIN `books2authors` ON `books2authors`.`book_id` = `books`.`id`
+            LEFT JOIN `authors` ON `books2authors`.`author_id` = `authors`.`id`
+            GROUP BY `books`.`id`
+        "
+    );
 }
-
-if (isset($res, $how_total_pages)) {
-
-    // вывод авторов текущей выборки книг
-    if ($res->num_rows) {
-        $ids_array = array();
-        while ($row = $res->fetch_assoc()) {
-            if (empty($row['img_name'])) {
-                $row['img_name'] = 'nophoto.png';
-            }
-            $data[$row['id']] = $row;
-            $ids_array[] = $row['id'];
-        }
-        $ids = implode (', ', $ids_array);
-
-        $ids_array = array();
-        $relation_res = q("
-            SELECT * FROM `books2authors`
-            WHERE `book_id` IN (".$ids.")
-        ");
-        while ($row = $relation_res->fetch_assoc()) {
-            $relation[$row['author_id']][] = $row['book_id'];
-            $ids_array[] = $row['author_id'];
-        }
-        $ids = implode (', ', $ids_array);
-
-        $author_res = q ("
-            SELECT * FROM `authors`
-            WHERE `id` IN (".$ids.")
-        ");
-
-        while ($row = $author_res->fetch_assoc()) {
-            foreach ($relation[$row['id']] as $v) {
-                if (!isset($data[$v]['auth'])) {
-                    $data[$v]['auth'] = $row['name'];
-                } else {
-                    $data[$v]['auth'] =  $data[$v]['auth'].', '.$row['name'];
-                }
-            }
-        }
-    }
-
-}
-
