@@ -7,5 +7,8 @@
         <div class="games_choise">
             <a href="/games/cities"><img class="animate" alt="" src="/skins/img/default/game/cities.jpg"></a>
         </div>
+        <div class="games_choise">
+            <a href="/games/snake"><img class="animate" alt="" src="/skins/img/default/game/snake.jpg"></a>
+        </div>
     </div>
 </div>

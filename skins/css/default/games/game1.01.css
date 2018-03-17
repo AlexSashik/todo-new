@@ -12,7 +12,7 @@
 }
 
 .game_choise_nav {
-    margin: 0 95px 0 95px;
+    margin: 0 auto;
     min-height: 200px;
 }
 
@@ -25,9 +25,9 @@
 
 .games_choise {
     float: left;
-    width: 350px;
+    width: 300px;
     text-align: center;
-    margin: 0 20px 0 20px;
+    margin: 0 10px 0 10px;
 }
 
 .games_choise img {
