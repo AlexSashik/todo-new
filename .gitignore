@@ -4,6 +4,7 @@
 /vendor/
 composer.phar
 /modules/test/
+/test
 *.ipr
 *.iws
 /out/
